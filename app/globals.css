@@ -13,50 +13,107 @@ body {
   font-family: var(--font-dm-sans), sans-serif;
 }
 
-/* Grain texture overlay */
-body::before {
+/* Subtle grid pattern on background */
+body::after {
   content: '';
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+  background-size: 48px 48px;
   pointer-events: none;
   z-index: 0;
 }
 
-/* Glass card */
+/* Glass card base */
 .glass-card {
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.035);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(16px);
   border-radius: 1rem;
+  transition: all 0.25s ease;
 }
 
 .glass-card:hover {
-  background: rgba(255, 255, 255, 0.07);
-  border-color: rgba(255, 255, 255, 0.14);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 32px rgba(99, 102, 241, 0.15);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.13);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255,255,255,0.04);
+}
+
+/* Track-colored glow variants */
+.card-teal:hover {
+  box-shadow: 0 12px 40px rgba(20, 184, 166, 0.12), 0 0 0 1px rgba(20,184,166,0.08);
+}
+
+.card-rose:hover {
+  box-shadow: 0 12px 40px rgba(244, 63, 94, 0.12), 0 0 0 1px rgba(244,63,94,0.08);
+}
+
+.card-indigo:hover {
+  box-shadow: 0 12px 40px rgba(99, 102, 241, 0.15), 0 0 0 1px rgba(99,102,241,0.08);
+}
+
+.card-amber:hover {
+  box-shadow: 0 12px 40px rgba(245, 158, 11, 0.12), 0 0 0 1px rgba(245,158,11,0.08);
 }
 
 /* Scrollbar */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: rgba(255,255,255,0.02); }
-::-webkit-scrollbar-thumb { background: rgba(99, 102, 241, 0.4); border-radius: 3px; }
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(99, 102, 241, 0.35); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(99, 102, 241, 0.55); }
 
+/* Animations */
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-12px); }
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-14px) rotate(1deg); }
+  66% { transform: translateY(-6px) rotate(-1deg); }
 }
 
-@keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(99, 102, 241, 0.3); }
-  50% { box-shadow: 0 0 40px rgba(99, 102, 241, 0.6); }
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
 }
 
 .float-animation {
-  animation: float 4s ease-in-out infinite;
+  animation: float 6s ease-in-out infinite;
 }
 
-.glow-indigo {
-  animation: pulse-glow 3s ease-in-out infinite;
+.fade-up {
+  animation: fade-up 0.5s ease both;
 }
+
+/* Staggered fade-up for children */
+.stagger > *:nth-child(1) { animation: fade-up 0.4s 0.05s ease both; }
+.stagger > *:nth-child(2) { animation: fade-up 0.4s 0.12s ease both; }
+.stagger > *:nth-child(3) { animation: fade-up 0.4s 0.19s ease both; }
+.stagger > *:nth-child(4) { animation: fade-up 0.4s 0.26s ease both; }
+.stagger > *:nth-child(5) { animation: fade-up 0.4s 0.33s ease both; }
+.stagger > *:nth-child(6) { animation: fade-up 0.4s 0.40s ease both; }
+.stagger > *:nth-child(n+7) { animation: fade-up 0.4s 0.45s ease both; }
+
+/* Gradient text shimmer */
+.shimmer-text {
+  background: linear-gradient(
+    90deg,
+    #818cf8 0%, #c084fc 25%, #f472b6 50%, #c084fc 75%, #818cf8 100%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 4s linear infinite;
+}
+
+/* Accent line at top of colored cards */
+.accent-top-teal  { border-top: 2px solid rgba(20, 184, 166, 0.6); }
+.accent-top-rose  { border-top: 2px solid rgba(244, 63, 94, 0.6); }
+.accent-top-amber { border-top: 2px solid rgba(245, 158, 11, 0.6); }
+.accent-top-indigo{ border-top: 2px solid rgba(99, 102, 241, 0.6); }

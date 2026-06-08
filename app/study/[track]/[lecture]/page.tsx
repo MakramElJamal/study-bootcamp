@@ -47,10 +47,9 @@ export default async function LecturePage({ params }: Props) {
           <div className={`inline-block px-3 py-1 rounded-full border text-xs font-dm mb-4 ${accentTag}`}>
             {isBusinessTrack ? 'Business Track' : 'Design Thinking'} · Lecture {currentLecture.number}
           </div>
-          <h1 className="text-3xl md:text-4xl font-black font-syne text-white mb-3 leading-tight">
+          <h1 className="text-3xl md:text-4xl font-black font-syne text-white mb-4 leading-tight">
             {currentLecture.title}
           </h1>
-          <p className="text-white/40 font-dm text-sm mb-4">{currentLecture.professor}</p>
           <div className="flex flex-wrap gap-2">
             {currentLecture.tags.map((tag) => (
               <span key={tag} className="px-2.5 py-1 rounded-lg bg-white/6 border border-white/8 text-white/40 text-xs font-dm">
