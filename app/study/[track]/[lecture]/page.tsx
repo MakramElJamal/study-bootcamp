@@ -4,6 +4,7 @@ import { businessLectures } from '@/data/business';
 import { designLectures } from '@/data/design';
 import ConceptCard from '@/components/ConceptCard';
 import LectureNav from '@/components/LectureNav';
+import StudyProgress from '@/components/StudyProgress';
 import Footer from '@/components/Footer';
 
 interface Props {
@@ -32,7 +33,11 @@ export default async function LecturePage({ params }: Props) {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <main className="flex-1 max-w-3xl mx-auto w-full px-4 py-12">
+      <StudyProgress
+        track={track as 'business' | 'design'}
+        totalConcepts={currentLecture.concepts.length}
+      />
+      <main className="flex-1 max-w-5xl mx-auto w-full px-4 md:px-8 py-12">
         {/* Breadcrumb */}
         <div className="flex items-center gap-2 text-white/30 text-sm font-dm mb-8">
           <Link href="/study" className="hover:text-white/60 transition-colors">Study</Link>
@@ -47,7 +52,7 @@ export default async function LecturePage({ params }: Props) {
           <div className={`inline-block px-3 py-1 rounded-full border text-xs font-dm mb-4 ${accentTag}`}>
             {isBusinessTrack ? 'Business Track' : 'Design Thinking'} · Lecture {currentLecture.number}
           </div>
-          <h1 className="text-3xl md:text-4xl font-black font-syne text-white mb-4 leading-tight">
+          <h1 className="text-4xl md:text-5xl font-black font-syne text-white mb-4 leading-tight">
             {currentLecture.title}
           </h1>
           <div className="flex flex-wrap gap-2">
@@ -60,7 +65,7 @@ export default async function LecturePage({ params }: Props) {
         </div>
 
         {/* Concept cards */}
-        <div className="space-y-5 stagger">
+        <div className="space-y-6 stagger">
           {currentLecture.concepts.map((concept, index) => (
             <ConceptCard
               key={concept.id}

@@ -4,7 +4,7 @@ import Footer from '@/components/Footer';
 export default function StudyPage() {
   return (
     <div className="min-h-screen flex flex-col">
-      <main className="flex-1 max-w-4xl mx-auto w-full px-4 py-12">
+      <main className="flex-1 max-w-6xl mx-auto w-full px-4 md:px-8 py-12">
         {/* Header */}
         <div className="mb-12 fade-up">
           <Link href="/" className="inline-flex items-center gap-1.5 text-white/30 hover:text-white/60 text-sm font-dm transition-colors mb-8">
@@ -22,7 +22,7 @@ export default function StudyPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 stagger">
           {/* Business Track */}
           <Link href="/study/business" className="group block">
-            <div className="glass-card card-teal accent-top-teal shine p-8 h-full">
+            <div className="glass-card card-teal accent-top-teal halo halo-teal shine p-8 md:p-10 h-full">
               <div className="flex items-center justify-between mb-6">
                 <div className="icon-wiggle w-14 h-14 rounded-2xl bg-teal-500/12 border border-teal-500/20 flex items-center justify-center text-3xl">
                   📊
@@ -50,7 +50,7 @@ export default function StudyPage() {
 
           {/* Design Track */}
           <Link href="/study/design" className="group block">
-            <div className="glass-card card-rose accent-top-rose shine p-8 h-full">
+            <div className="glass-card card-rose accent-top-rose halo halo-rose shine p-8 md:p-10 h-full">
               <div className="flex items-center justify-between mb-6">
                 <div className="icon-wiggle w-14 h-14 rounded-2xl bg-rose-500/12 border border-rose-500/20 flex items-center justify-center text-3xl">
                   🎨

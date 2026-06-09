@@ -142,46 +142,10 @@ body {
   to   { left: 130%; }
 }
 
-/* Animated conic gradient border (for hero CTA cards) */
-.gradient-ring {
-  position: relative;
-}
-.gradient-ring::after {
-  content: '';
-  position: absolute;
-  inset: -1px;
-  border-radius: inherit;
-  padding: 1px;
-  background: conic-gradient(
-    from var(--ring-angle, 0deg),
-    transparent 0%,
-    rgba(99,102,241,0.0) 20%,
-    rgba(129,140,248,0.8) 32%,
-    rgba(192,132,252,0.8) 42%,
-    rgba(99,102,241,0.0) 55%,
-    transparent 100%
-  );
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask-composite: exclude;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  animation: ring-rotate 3.5s linear infinite;
-  pointer-events: none;
-}
-.gradient-ring:hover::after { opacity: 1; }
-.gradient-ring-amber::after {
-  background: conic-gradient(
-    from var(--ring-angle, 0deg),
-    transparent 0%,
-    rgba(245,158,11,0.0) 20%,
-    rgba(251,191,36,0.8) 32%,
-    rgba(245,158,11,0.8) 42%,
-    rgba(245,158,11,0.0) 55%,
-    transparent 100%
-  );
-}
+/* ─────────────────────────────────────────────
+   HALO BORDERS — full sliding gradient ring +
+   soft glow halo, revealed on hover
+   ───────────────────────────────────────────── */
 
 @property --ring-angle {
   syntax: '<angle>';
@@ -191,6 +155,39 @@ body {
 @keyframes ring-rotate {
   to { --ring-angle: 360deg; }
 }
+
+.halo {
+  position: relative;
+}
+.halo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: conic-gradient(
+    from var(--ring-angle, 0deg),
+    var(--halo-a, rgba(129,140,248,0.9)) 0%,
+    var(--halo-b, rgba(192,132,252,0.9)) 25%,
+    var(--halo-a, rgba(129,140,248,0.9)) 50%,
+    var(--halo-b, rgba(192,132,252,0.9)) 75%,
+    var(--halo-a, rgba(129,140,248,0.9)) 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.45s ease;
+  animation: ring-rotate 4s linear infinite;
+  pointer-events: none;
+}
+.halo:hover::after { opacity: 1; }
+
+.halo-indigo { --halo-a: rgba(129,140,248,0.9); --halo-b: rgba(192,132,252,0.9); }
+.halo-amber  { --halo-a: rgba(251,191,36,0.9);  --halo-b: rgba(249,115,22,0.85); }
+.halo-teal   { --halo-a: rgba(45,212,191,0.9);  --halo-b: rgba(52,211,153,0.85); }
+.halo-rose   { --halo-a: rgba(251,113,133,0.9); --halo-b: rgba(244,114,182,0.85); }
 
 /* ─────────────────────────────────────────────
    ENTRANCES

@@ -70,7 +70,7 @@ export default function Home() {
         {/* CTA Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-2xl mb-10 stagger">
           <Link href="/study" className="group block">
-            <div className="glass-card card-indigo accent-top-indigo gradient-ring shine p-7 h-full">
+            <div className="glass-card card-indigo accent-top-indigo halo halo-indigo shine p-7 h-full">
               <div className="flex items-start justify-between mb-5">
                 <div className="icon-wiggle w-12 h-12 rounded-xl bg-indigo-500/15 border border-indigo-500/25 flex items-center justify-center text-2xl">
                   📖
@@ -89,7 +89,7 @@ export default function Home() {
           </Link>
 
           <Link href="/quiz" className="group block">
-            <div className="glass-card card-amber accent-top-amber gradient-ring gradient-ring-amber shine p-7 h-full">
+            <div className="glass-card card-amber accent-top-amber halo halo-amber shine p-7 h-full">
               <div className="flex items-start justify-between mb-5">
                 <div className="icon-wiggle w-12 h-12 rounded-xl bg-amber-500/15 border border-amber-500/25 flex items-center justify-center text-2xl">
                   ⚡

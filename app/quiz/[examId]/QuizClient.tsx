@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { Exam } from '@/types';
 import QuizQuestion from '@/components/QuizQuestion';
@@ -26,14 +26,18 @@ export default function QuizClient({ exam }: QuizClientProps) {
     if (!confirmed) setSelectedIndex(index);
   };
 
-  const handleConfirm = () => {
-    const newAnswers = [...answers];
-    newAnswers[currentIndex] = selectedIndex;
-    setAnswers(newAnswers);
+  const handleConfirm = useCallback(() => {
+    if (selectedIndex === null || confirmed) return;
+    setAnswers((prev) => {
+      const next = [...prev];
+      next[currentIndex] = selectedIndex;
+      return next;
+    });
     setConfirmed(true);
-  };
+  }, [selectedIndex, confirmed, currentIndex]);
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
+    if (!confirmed) return;
     if (isLast) {
       const params = new URLSearchParams();
       answers.forEach((ans, i) => {
@@ -45,7 +49,28 @@ export default function QuizClient({ exam }: QuizClientProps) {
       setSelectedIndex(null);
       setConfirmed(false);
     }
-  };
+  }, [confirmed, isLast, answers, router, exam.id]);
+
+  // Keyboard controls: A–D / 1–4 select, Enter confirms then advances
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        if (!confirmed && selectedIndex !== null) handleConfirm();
+        else if (confirmed) handleNext();
+        return;
+      }
+      if (confirmed) return;
+      const letter = e.key.toUpperCase();
+      if (letter >= 'A' && letter <= 'D') {
+        setSelectedIndex(letter.charCodeAt(0) - 65);
+      } else if (e.key >= '1' && e.key <= '4') {
+        setSelectedIndex(parseInt(e.key, 10) - 1);
+      }
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [confirmed, selectedIndex, handleConfirm, handleNext]);
 
   return (
     <div className="w-full">
@@ -68,6 +93,11 @@ export default function QuizClient({ exam }: QuizClientProps) {
         onNext={handleNext}
         isLast={isLast}
       />
+
+      {/* Keyboard hint */}
+      <p className="hidden md:block text-center text-white/20 font-dm text-xs mt-10">
+        Keyboard: <span className="text-white/35">A–D</span> or <span className="text-white/35">1–4</span> to select · <span className="text-white/35">Enter</span> to confirm &amp; continue
+      </p>
     </div>
   );
 }

@@ -3,11 +3,11 @@ import { exams } from '@/data/quizzes';
 import Footer from '@/components/Footer';
 
 const examAccents = [
-  { border: 'accent-top-amber', hover: 'card-amber', badge: 'bg-amber-500/12 border-amber-500/20 text-amber-400', dot: 'bg-amber-400', label: 'Official Mock' },
-  { border: 'accent-top-teal',  hover: 'card-teal',  badge: 'bg-teal-500/12  border-teal-500/20  text-teal-400',  dot: 'bg-teal-400',  label: 'Business Focus' },
-  { border: 'accent-top-rose',  hover: 'card-rose',  badge: 'bg-rose-500/12  border-rose-500/20  text-rose-400',  dot: 'bg-rose-400',  label: 'Design Focus' },
-  { border: 'accent-top-indigo',hover: 'card-indigo',badge: 'bg-indigo-500/12 border-indigo-500/20 text-indigo-400',dot: 'bg-indigo-400',label: 'Mixed' },
-  { border: 'accent-top-indigo',hover: 'card-indigo',badge: 'bg-red-500/12    border-red-500/20    text-red-400',   dot: 'bg-red-400',   label: 'Hardest' },
+  { border: 'accent-top-amber', hover: 'card-amber halo halo-amber', badge: 'bg-amber-500/12 border-amber-500/20 text-amber-400', dot: 'bg-amber-400', label: 'Official Mock' },
+  { border: 'accent-top-teal',  hover: 'card-teal halo halo-teal',  badge: 'bg-teal-500/12  border-teal-500/20  text-teal-400',  dot: 'bg-teal-400',  label: 'Business Focus' },
+  { border: 'accent-top-rose',  hover: 'card-rose halo halo-rose',  badge: 'bg-rose-500/12  border-rose-500/20  text-rose-400',  dot: 'bg-rose-400',  label: 'Design Focus' },
+  { border: 'accent-top-indigo',hover: 'card-indigo halo halo-indigo',badge: 'bg-indigo-500/12 border-indigo-500/20 text-indigo-400',dot: 'bg-indigo-400',label: 'Mixed' },
+  { border: 'accent-top-indigo',hover: 'card-indigo halo halo-indigo',badge: 'bg-red-500/12    border-red-500/20    text-red-400',   dot: 'bg-red-400',   label: 'Hardest' },
 ];
 
 export default function QuizPage() {

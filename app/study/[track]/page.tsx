@@ -31,7 +31,7 @@ export default async function TrackPage({ params }: Props) {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <main className="flex-1 max-w-4xl mx-auto w-full px-4 py-12">
+      <main className="flex-1 max-w-6xl mx-auto w-full px-4 md:px-8 py-12">
         {/* Header */}
         <div className="mb-10 fade-up">
           <Link href="/study" className="inline-flex items-center gap-1.5 text-white/30 hover:text-white/60 text-sm font-dm transition-colors mb-8">
@@ -68,7 +68,7 @@ export default async function TrackPage({ params }: Props) {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 stagger">
           {lectures.map((lecture) => (
             <Link key={lecture.id} href={`/study/${track}/${lecture.number}`} className="group block">
-              <div className={`glass-card ${accentHover} p-5 h-full relative overflow-hidden`}>
+              <div className={`glass-card ${accentHover} halo ${isBusinessTrack ? 'halo-teal' : 'halo-rose'} p-6 h-full relative overflow-hidden`}>
                 {/* Big background number */}
                 <div className={`absolute -top-2 -right-1 text-7xl font-black font-syne pointer-events-none select-none leading-none ${isBusinessTrack ? 'text-teal-500/6' : 'text-rose-500/6'}`}>
                   {String(lecture.number).padStart(2, '0')}
@@ -78,7 +78,7 @@ export default async function TrackPage({ params }: Props) {
                   <div className={`text-xs font-dm font-semibold mb-2.5 ${accentText}`}>
                     Lecture {lecture.number}
                   </div>
-                  <h3 className="font-syne font-bold text-white text-base mb-3 leading-snug pr-6">
+                  <h3 className="font-syne font-bold text-white text-lg mb-3 leading-snug pr-6">
                     {lecture.title}
                   </h3>
                   <div className="flex flex-wrap gap-1.5 mb-4">

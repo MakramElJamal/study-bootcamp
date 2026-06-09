@@ -21,9 +21,9 @@ export default function CursorGlow() {
     };
 
     const tick = () => {
-      x += (targetX - x) * 0.08;
-      y += (targetY - y) * 0.08;
-      glow.style.transform = `translate(${x - 300}px, ${y - 300}px)`;
+      x += (targetX - x) * 0.05;
+      y += (targetY - y) * 0.05;
+      glow.style.transform = `translate(${x - 200}px, ${y - 200}px)`;
       raf = requestAnimationFrame(tick);
     };
 
@@ -40,9 +40,9 @@ export default function CursorGlow() {
     <div
       ref={glowRef}
       aria-hidden
-      className="fixed top-0 left-0 w-[600px] h-[600px] rounded-full pointer-events-none z-0 hidden md:block"
+      className="fixed top-0 left-0 w-[400px] h-[400px] rounded-full pointer-events-none z-0 hidden md:block"
       style={{
-        background: 'radial-gradient(circle, rgba(99,102,241,0.07) 0%, transparent 60%)',
+        background: 'radial-gradient(circle, rgba(99,102,241,0.035) 0%, transparent 60%)',
       }}
     />
   );
