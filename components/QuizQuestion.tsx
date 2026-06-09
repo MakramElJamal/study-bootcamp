@@ -44,7 +44,7 @@ export default function QuizQuestion({
   };
 
   return (
-    <div key={question.id} className="w-full max-w-2xl mx-auto question-in">
+    <div key={question.id} className="w-full max-w-3xl mx-auto question-in">
       {/* Question */}
       <div className="mb-6">
         <div className="flex items-center gap-2 mb-3">
@@ -55,7 +55,7 @@ export default function QuizQuestion({
             {question.topic}
           </span>
         </div>
-        <h2 className="text-lg md:text-xl font-syne font-semibold text-white leading-snug">
+        <h2 className="text-xl md:text-2xl font-syne font-semibold text-white leading-snug">
           {question.question}
         </h2>
       </div>
@@ -67,9 +67,9 @@ export default function QuizQuestion({
             key={index}
             onClick={() => !confirmed && onSelect(index)}
             disabled={confirmed}
-            className={`w-full text-left px-5 py-4 rounded-xl border font-dm text-sm transition-all duration-200 ${getOptionStyle(index)}`}
+            className={`w-full text-left px-6 py-5 rounded-xl border font-dm text-base transition-all duration-200 ${getOptionStyle(index)}`}
           >
-            <span className="inline-block w-5 h-5 rounded-full border border-current mr-3 text-xs text-center leading-[18px] font-bold">
+            <span className="inline-block w-6 h-6 rounded-full border border-current mr-3 text-xs text-center leading-[22px] font-bold">
               {String.fromCharCode(65 + index)}
             </span>
             {option}
@@ -89,7 +89,7 @@ export default function QuizQuestion({
           <p className={`text-xs uppercase tracking-widest font-dm font-semibold mb-2 ${isCorrect ? 'text-teal-400' : 'text-rose-400'}`}>
             {isCorrect ? '✓ Correct!' : '✗ Not quite'}
           </p>
-          <p className="text-white/70 font-dm text-sm leading-relaxed">
+          <p className="text-white/70 font-dm text-base leading-relaxed">
             {question.explanation}
           </p>
         </div>

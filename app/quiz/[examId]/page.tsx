@@ -18,7 +18,7 @@ export default async function QuizExamPage({ params }: Props) {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <main className="flex-1 max-w-2xl mx-auto w-full px-4 py-12">
+      <main className="flex-1 max-w-3xl mx-auto w-full px-4 py-12">
         {/* Header */}
         <div className="mb-8">
           <Link href="/quiz" className="text-white/30 hover:text-white/60 text-sm font-dm transition-colors">

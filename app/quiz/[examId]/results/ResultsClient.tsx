@@ -58,7 +58,7 @@ export default function ResultsClient({ exam }: ResultsClientProps) {
                   <span className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${isCorrect ? 'bg-teal-500/20 text-teal-400' : 'bg-rose-500/20 text-rose-400'}`}>
                     {isCorrect ? '✓' : '✗'}
                   </span>
-                  <p className="text-white/80 font-dm text-sm font-medium leading-snug">
+                  <p className="text-white/80 font-dm text-base font-medium leading-snug">
                     {index + 1}. {question.question}
                   </p>
                 </div>
@@ -68,9 +68,9 @@ export default function ResultsClient({ exam }: ResultsClientProps) {
                     const isUserChoice = optIdx === userAnswer;
                     const isCorrectChoice = optIdx === question.correctIndex;
 
-                    let style = 'text-white/30 font-dm text-xs';
-                    if (isCorrectChoice) style = 'text-teal-400 font-dm text-xs font-semibold';
-                    else if (isUserChoice && !isCorrect) style = 'text-rose-400 font-dm text-xs line-through';
+                    let style = 'text-white/30 font-dm text-sm';
+                    if (isCorrectChoice) style = 'text-teal-400 font-dm text-sm font-semibold';
+                    else if (isUserChoice && !isCorrect) style = 'text-rose-400 font-dm text-sm line-through';
 
                     return (
                       <div key={optIdx} className={`flex items-center gap-2 ${style}`}>
@@ -84,7 +84,7 @@ export default function ResultsClient({ exam }: ResultsClientProps) {
                 </div>
 
                 <div className={`rounded-lg p-3 ${isCorrect ? 'bg-teal-500/8 border border-teal-500/15' : 'bg-white/4 border border-white/8'}`}>
-                  <p className="text-white/50 font-dm text-xs leading-relaxed">
+                  <p className="text-white/50 font-dm text-sm leading-relaxed">
                     {question.explanation}
                   </p>
                 </div>
