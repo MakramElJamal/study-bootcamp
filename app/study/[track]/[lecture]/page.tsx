@@ -43,7 +43,7 @@ export default async function LecturePage({ params }: Props) {
         </div>
 
         {/* Lecture header */}
-        <div className="mb-10">
+        <div className="mb-10 blur-in">
           <div className={`inline-block px-3 py-1 rounded-full border text-xs font-dm mb-4 ${accentTag}`}>
             {isBusinessTrack ? 'Business Track' : 'Design Thinking'} · Lecture {currentLecture.number}
           </div>
@@ -60,7 +60,7 @@ export default async function LecturePage({ params }: Props) {
         </div>
 
         {/* Concept cards */}
-        <div className="space-y-5">
+        <div className="space-y-5 stagger">
           {currentLecture.concepts.map((concept, index) => (
             <ConceptCard
               key={concept.id}

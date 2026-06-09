@@ -24,21 +24,21 @@ export default function ResultsClient({ exam }: ResultsClientProps) {
   return (
     <div className="w-full">
       {/* Score */}
-      <div className="glass-card p-8 mb-8 flex flex-col items-center">
+      <div className="glass-card p-8 mb-8 flex flex-col items-center blur-in overflow-hidden">
         <ScoreCard score={score} total={exam.questions.length} />
       </div>
 
       {/* Action buttons */}
-      <div className="flex flex-col sm:flex-row gap-3 mb-10">
+      <div className="flex flex-col sm:flex-row gap-3 mb-10 fade-up" style={{ animationDelay: '0.3s' }}>
         <Link
           href={`/quiz/${exam.id}`}
-          className="flex-1 text-center py-3 px-5 glass-card text-white/70 hover:text-white font-dm text-sm font-medium rounded-xl transition-all duration-200"
+          className="shine relative flex-1 text-center py-3 px-5 glass-card text-white/70 hover:text-white font-dm text-sm font-medium rounded-xl transition-all duration-200"
         >
           Try Again
         </Link>
         <Link
           href="/quiz"
-          className="flex-1 text-center py-3 px-5 bg-indigo-500 hover:bg-indigo-400 text-white font-dm text-sm font-medium rounded-xl transition-all duration-200"
+          className="shine relative flex-1 text-center py-3 px-5 bg-indigo-500 hover:bg-indigo-400 text-white font-dm text-sm font-medium rounded-xl transition-all duration-200 hover:shadow-[0_8px_28px_rgba(99,102,241,0.35)] hover:-translate-y-0.5"
         >
           Back to Quizzes
         </Link>
@@ -47,7 +47,7 @@ export default function ResultsClient({ exam }: ResultsClientProps) {
       {/* Question review */}
       <div>
         <h2 className="text-xl font-bold font-syne text-white mb-5">Full Review</h2>
-        <div className="space-y-5">
+        <div className="space-y-5 stagger">
           {exam.questions.map((question, index) => {
             const userAnswer = answers[index];
             const isCorrect = userAnswer === question.correctIndex;

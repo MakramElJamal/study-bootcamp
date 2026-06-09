@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Syne, DM_Sans } from "next/font/google";
+import CursorGlow from "@/components/CursorGlow";
 import "./globals.css";
 
 const syne = Syne({
@@ -27,7 +28,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${syne.variable} ${dmSans.variable} antialiased min-h-screen`}>
-        {children}
+        <div className="bg-aurora" aria-hidden />
+        <div className="bg-grid" aria-hidden />
+        <div className="bg-grain" aria-hidden />
+        <CursorGlow />
+        <div className="relative z-10">
+          {children}
+        </div>
       </body>
     </html>
   );

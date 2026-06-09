@@ -43,7 +43,7 @@ export default function QuizPage() {
             const accent = examAccents[i];
             return (
               <Link key={exam.id} href={`/quiz/${exam.id}`} className="group block">
-                <div className={`glass-card ${accent.border} ${accent.hover} p-6 h-full relative overflow-hidden`}>
+                <div className={`glass-card ${accent.border} ${accent.hover} shine p-6 h-full relative overflow-hidden`}>
                   {/* Big background number */}
                   <div className="absolute -bottom-3 -right-2 text-8xl font-black font-syne text-white/4 pointer-events-none select-none leading-none">
                     {String(i + 1).padStart(2, '0')}

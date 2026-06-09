@@ -22,9 +22,9 @@ export default function StudyPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 stagger">
           {/* Business Track */}
           <Link href="/study/business" className="group block">
-            <div className="glass-card card-teal accent-top-teal p-8 h-full">
+            <div className="glass-card card-teal accent-top-teal shine p-8 h-full">
               <div className="flex items-center justify-between mb-6">
-                <div className="w-14 h-14 rounded-2xl bg-teal-500/12 border border-teal-500/20 flex items-center justify-center text-3xl">
+                <div className="icon-wiggle w-14 h-14 rounded-2xl bg-teal-500/12 border border-teal-500/20 flex items-center justify-center text-3xl">
                   📊
                 </div>
                 <div className="text-right">
@@ -50,9 +50,9 @@ export default function StudyPage() {
 
           {/* Design Track */}
           <Link href="/study/design" className="group block">
-            <div className="glass-card card-rose accent-top-rose p-8 h-full">
+            <div className="glass-card card-rose accent-top-rose shine p-8 h-full">
               <div className="flex items-center justify-between mb-6">
-                <div className="w-14 h-14 rounded-2xl bg-rose-500/12 border border-rose-500/20 flex items-center justify-center text-3xl">
+                <div className="icon-wiggle w-14 h-14 rounded-2xl bg-rose-500/12 border border-rose-500/20 flex items-center justify-center text-3xl">
                   🎨
                 </div>
                 <div className="text-right">
