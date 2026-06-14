@@ -4,71 +4,62 @@
 <meta charset="utf-8">
 <title>Entrepreneurship Bootcamp — Complete Study Guide & Cheatsheet</title>
 <style>
-  @page { size: A4; margin: 11mm 10mm; }
+  @page { size: A4; margin: 9mm 8mm; }
   * { box-sizing: border-box; }
   html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    font-size: 10px;
-    line-height: 1.42;
-    color: #1a1a22;
-    margin: 0;
-  }
-  .cols { column-count: 2; column-gap: 11px; }
-  h1.title { font-size: 21px; margin: 0 0 2px; color: #4338ca; letter-spacing: -0.3px; }
-  .subtitle { font-size: 10px; color: #555; margin: 0 0 5px; }
-  .hero { border-bottom: 2.5px solid #6366f1; padding-bottom: 6px; margin-bottom: 9px; column-span: all; }
-  .legend { font-size: 9.2px; color: #555; margin-top: 3px; }
-  .howto { font-size: 9.2px; color: #444; margin-top: 4px; background:#f4f4fc; border-radius:4px; padding:4px 7px; }
-  .pill { display: inline-block; padding: 0 5px; border-radius: 6px; font-weight: 600; font-size: 8.6px; }
-  .pill.b { background: #ccfbf1; color: #0f766e; }
-  .pill.d { background: #ffe4e6; color: #be123c; }
+  body { font-family: "Segoe UI", Arial, sans-serif; font-size: 9.6px; line-height: 1.34; color: #1a1a22; margin: 0; }
+  .cols { column-count: 2; column-gap: 8px; column-fill: auto; }
+  h1.title { font-size: 19px; margin: 0 0 1px; color: #4338ca; letter-spacing: -0.3px; }
+  .subtitle { font-size: 9.5px; color: #555; margin: 0; }
+  .hero { border-bottom: 2.5px solid #6366f1; padding-bottom: 4px; margin-bottom: 6px; column-span: all; }
 
-  .card { break-inside: avoid; border: 0.8px solid #d8d8e2; border-radius: 5px; padding: 6px 8px; margin: 0 0 7px; background: #fff; }
+  .card { break-inside: avoid; border: 0.8px solid #d8d8e2; border-radius: 4px; padding: 4px 7px; margin: 0 0 4px; background: #fff; }
   .card.biz { border-left: 3px solid #14b8a6; }
   .card.des { border-left: 3px solid #f43f5e; }
   .card.key { border-left: 3px solid #f59e0b; background: #fffdf6; }
   .card.frame { border-left: 3px solid #6366f1; background: #fafaff; }
 
-  .card h3 { font-size: 12px; margin: 0 0 3px; color: #111; font-weight: 700; }
+  .card h3 { font-size: 11px; margin: 0 0 2px; color: #111; font-weight: 700; }
   .biz h3 { color: #0f766e; } .des h3 { color: #be123c; } .key h3 { color: #b45309; } .frame h3 { color: #4338ca; }
-  .lecnum { font-weight: 800; opacity: 0.5; font-size: 9px; }
+  .lecnum { font-weight: 800; opacity: 0.5; font-size: 8.6px; }
+  .crit { display:inline-block; margin-left:3px; padding:0 3.5px; border-radius:3px; font-size:7.2px; font-weight:800; letter-spacing:0.2px; vertical-align:middle; }
+  .crit.p { background:#d1fae5; color:#047857; }
+  .crit.m { background:#fde7c7; color:#b45309; }
+  .crit.d { background:#ede9fe; color:#6d28d9; }
 
-  .card p { margin: 3px 0; }
-  .card ul { margin: 3px 0; padding-left: 14px; }
-  .card li { margin: 1.5px 0; }
+  .card p { margin: 2px 0; }
+  .card ul { margin: 2px 0; padding-left: 13px; }
+  .card li { margin: 0.5px 0; }
   b, strong { color: #000; }
   .term { font-weight: 700; color: #1e1b4b; }
   .biz .term { color: #115e59; } .des .term { color: #9f1239; }
   .def { color:#444; }
-  .formula { font-family: "Cambria Math", Georgia, serif; background: #eef0fb; padding: 1.5px 5px; border-radius: 3px; font-size: 10.2px; display: inline-block; margin: 2px 0; }
-  .tip { background: #fef3c7; border-radius: 3px; padding: 3px 6px; margin-top: 4px; font-size: 9.4px; color: #92400e; }
+  .formula { font-family: "Cambria Math", Georgia, serif; background: #eef0fb; padding: 1px 5px; border-radius: 3px; font-size: 9.8px; display: inline-block; margin: 1.5px 0; }
+  .tip { background: #fef3c7; border-radius: 3px; padding: 2.5px 6px; margin-top: 3px; font-size: 9px; color: #92400e; }
   .tip::before { content: "⚡ "; }
-  .ex { background:#eff6ff; border:0.6px solid #bfdbfe; border-radius:4px; padding:4px 7px; margin-top:4px; font-size:9.4px; }
+  .ex { background:#eff6ff; border:0.6px solid #bfdbfe; border-radius:4px; padding:3px 6px; margin-top:3px; font-size:9px; }
   .ex b.h { color:#1d4ed8; display:block; margin-bottom:1px; }
-  .steps { margin:2px 0 0; padding-left:15px; }
-  .steps li { margin:1px 0; }
-  table.mini { width: 100%; border-collapse: collapse; margin: 3px 0; font-size: 9.3px; }
-  table.mini td, table.mini th { border: 0.6px solid #ddd; padding: 2px 4px; vertical-align: top; text-align:left; }
+  .steps { margin:1px 0 0; padding-left:14px; }
+  .steps li { margin:0.5px 0; }
+  table.mini { width: 100%; border-collapse: collapse; margin: 2px 0; font-size: 9px; }
+  table.mini td, table.mini th { border: 0.6px solid #ddd; padding: 1.5px 4px; vertical-align: top; text-align:left; }
   table.mini td:first-child { font-weight: 700; white-space: nowrap; background: #f7f7fc; }
-  table.mini th { background:#eef0fb; font-size:9px; }
-  table.map { table-layout:fixed; }
-  table.map td { font-size:9px; vertical-align:top; }
-  table.map td:first-child { white-space:normal; width:58%; font-weight:600; background:#fff; }
-  table.map th:first-child { width:58%; }
-  table.stmt { width:100%; border-collapse:collapse; margin:3px 0; font-size:9.3px; }
-  table.stmt td { padding:1.5px 5px; border-bottom:0.5px solid #eee; }
+  table.mini th { background:#eef0fb; font-size:8.6px; }
+  table.stmt { width:100%; border-collapse:collapse; margin:2px 0; font-size:9px; }
+  table.stmt td { padding:1px 5px; border-bottom:0.5px solid #eee; }
   table.stmt td:last-child { text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
   table.stmt tr.sub td { font-weight:700; border-top:0.8px solid #999; border-bottom:0.8px solid #999; background:#f4f4fc; }
   table.stmt tr.tot td { font-weight:800; border-top:1.4px double #555; border-bottom:1.4px double #555; }
   table.stmt tr.neg td:last-child { color:#b91c1c; }
-  table.stmt td.grp { font-weight:700; color:#4338ca; padding-top:4px; }
-  .sec-head { column-span: all; background: linear-gradient(90deg,#6366f1,#a855f7); color: #fff; font-weight: 700; font-size: 13px; padding: 4px 10px; border-radius: 5px; margin: 4px 0 8px; }
+  table.stmt td.grp { font-weight:700; color:#4338ca; padding-top:3px; }
+  .sec-head { column-span: all; background: linear-gradient(90deg,#6366f1,#a855f7); color: #fff; font-weight: 700; font-size: 12px; padding: 3px 9px; border-radius: 4px; margin: 2px 0 6px; }
   .sec-head.bizh { background: linear-gradient(90deg,#0d9488,#14b8a6); }
   .sec-head.desh { background: linear-gradient(90deg,#e11d48,#fb7185); }
   .sec-head.keyh { background: linear-gradient(90deg,#d97706,#f59e0b); }
   .sec-head small { font-weight:400; opacity:0.9; font-size:9px; }
-  .footer { column-span: all; text-align: center; font-size: 9px; color: #999; margin-top: 7px; border-top: 0.6px solid #ddd; padding-top: 4px; }
+  .footer { column-span: all; text-align: center; font-size: 8.6px; color: #999; margin-top: 5px; border-top: 0.6px solid #ddd; padding-top: 3px; }
+  .keybar { column-span: all; font-size:8.6px; color:#555; margin:-2px 0 7px; }
+  .keybar .crit { font-size:7.2px; }
 </style>
 </head>
 <body>
@@ -77,57 +68,10 @@
   <h1 class="title">🧠 Entrepreneurship Bootcamp — Complete Study Guide</h1>
   <p class="subtitle">Cheatsheet by Makram ElJamal for Entrepreneurship Bootcamp · Spring 2026</p>
 </div>
-
-<!-- ============ GRADING CRITERIA MAP ============ -->
-<div class="sec-head">📋 PEARSON CRITERIA → WHERE TO STUDY IT <small>P = Pass · M = Merit · D = Distinction</small></div>
-<div class="cols">
-
-  <div class="card frame">
-    <h3>1 · Entrepreneurial Mindset &amp; Approaches</h3>
-    <table class="mini map">
-      <tr><th>Criterion</th><th>Study in this guide</th></tr>
-      <tr><td>P1 — key skills + entrepreneurial mindset to launch a start-up</td><td>L1: Innovation &amp; Entrepreneurship; 3Ms; Growth Mindset; Agility; High-Performance Teams</td></tr>
-      <tr><td>P2 — entrepreneurship approaches (agile, lean, social)</td><td>L3: Entrepreneurship Approaches</td></tr>
-      <tr><td>M1 — PEST analysis; identify external O&amp;T; justify pursuing an opportunity</td><td>L2: PEST + SWOT (the O &amp; T)</td></tr>
-      <tr><td>D1 — justify the most suitable approach (integrate O&amp;T, market, resources, team, goals)</td><td>L3 approaches + L2 PEST/SWOT (e.g. Lean for an uncertain market + limited resources)</td></tr>
-    </table>
-  </div>
-
-  <div class="card frame">
-    <h3>2 · Design Thinking &amp; Prototyping</h3>
-    <table class="mini map">
-      <tr><th>Criterion</th><th>Study in this guide</th></tr>
-      <tr><td>P3 — DT techniques to identify market gaps &amp; challenges</td><td>L1 DT process / HCD / Human Hacks; L2 Observe·Engage·Immerse; L3 Problem Statement</td></tr>
-      <tr><td>P4 — DT to propose a solution + build a prototype</td><td>L5 HMW &amp; Ideation; L6 Prototype Types</td></tr>
-      <tr><td>M2 — multiple prototype iterations from validated feedback; problem–solution fit</td><td>L6 Validation Engine; L7 Feedback Extraction &amp; Methods</td></tr>
-      <tr><td>D2 — critically evaluate validation/testing (problem validation, problem–solution &amp; product–market fit)</td><td>L6 Double Diamond; L7 RAT + Iterate/Pivot/Kill</td></tr>
-    </table>
-  </div>
-
-  <div class="card frame">
-    <h3>3 · Marketing, Market Size &amp; Finance</h3>
-    <table class="mini map">
-      <tr><th>Criterion</th><th>Study in this guide</th></tr>
-      <tr><td>P5 — analyse target market + estimate market size</td><td>L5 Markets / Segmentation; TAM/SAM/SOM; Diffusion of Innovation</td></tr>
-      <tr><td>P6 — competitor analysis + clear value proposition</td><td>L6 Competitor Analysis / USP / Perceptual Map; L5 Value Proposition Canvas</td></tr>
-      <tr><td>P7 — cost structures, revenue streams/model, financial projections</td><td>L8 Cost, Revenue &amp; Finance Basics</td></tr>
-      <tr><td>M3 — marketing mix → strategy communicating the VP &amp; competitive advantage</td><td>L7 4Ps → 7Ps</td></tr>
-      <tr><td>M4 — forecasted budget + key financial statements</td><td>L8 Budget; Finance Deep-Dive: Income Statement, Balance Sheet &amp; Cash Flow layouts</td></tr>
-      <tr><td>D3 — feasibility &amp; viability via financial ratios &amp; analysis; justify improvements</td><td>Finance Deep-Dive: NPM/GPM/ROI/Current Ratio, Breakeven + all worked examples</td></tr>
-    </table>
-  </div>
-
-  <div class="card frame">
-    <h3>4 · Business Model Canvas &amp; Pitch</h3>
-    <table class="mini map">
-      <tr><th>Criterion</th><th>Study in this guide</th></tr>
-      <tr><td>P8 — craft &amp; describe a Business Model Canvas</td><td>L4 Business Model Canvas (9 blocks)</td></tr>
-      <tr><td>P9 — presentation &amp; persuasion to pitch a business idea</td><td>L4 Jargon Assassin ("Speak Human"); L5 Communication &amp; The Pause</td></tr>
-      <tr><td>M5 — compelling pitch applying entrepreneurial knowledge to investors</td><td>Whole guide — lead with VP, market size, BMC &amp; financial viability</td></tr>
-      <tr><td>D4 — critically evaluate the BMC; improve desirability / feasibility / viability</td><td>L4 BMC + Common Mistakes; "best single BMC change" in Exam Strategy</td></tr>
-    </table>
-  </div>
-
+<div class="keybar">
+  Each card is tagged with the Pearson criteria it covers:
+  <span class="crit p">P#</span> Pass · <span class="crit m">M#</span> Merit · <span class="crit d">D#</span> Distinction. &nbsp;
+  Colour of card: <b style="color:#0f766e">teal</b>=business · <b style="color:#be123c">rose</b>=design · <b style="color:#b45309">amber</b>=formula/exam-critical · <b style="color:#4338ca">indigo</b>=worked example.
 </div>
 
 <!-- ============ BUSINESS TRACK ============ -->
@@ -135,22 +79,22 @@
 <div class="cols">
 
   <div class="card biz">
-    <h3><span class="lecnum">L1 ·</span> Innovation &amp; Entrepreneurship</h3>
-    <p><span class="term">Innovation</span> <span class="def">= creating <b>and</b> implementing new ideas that generate value (economic, social, or technological). It can be a new product, service, process, or business model.</span></p>
-    <p><b>Key idea:</b> innovation ≠ invention. An invention is a new thing; an innovation is a new thing that <b>creates value</b> and is actually put to use. If it doesn't create value, it isn't innovation.</p>
-    <p><span class="term">Entrepreneurship</span> <span class="def">= identifying opportunities, mobilizing resources, and creating value through new ventures.</span> It turns innovative ideas into sustainable businesses, and is the <b>4th factor of production</b> alongside land, labor, and capital — the function that organizes the other three.</p>
+    <h3><span class="lecnum">L1 ·</span> Innovation &amp; Entrepreneurship <span class="crit p">P1</span></h3>
+    <p><span class="term">Innovation</span> <span class="def">= creating <b>and</b> implementing new ideas that generate value (economic, social, or technological). Can be a new product, service, process, or business model.</span></p>
+    <p><b>Key idea:</b> innovation ≠ invention. An invention is a new thing; an innovation is a new thing that <b>creates value</b> and is actually used. No value = not innovation.</p>
+    <p><span class="term">Entrepreneurship</span> <span class="def">= identifying opportunities, mobilizing resources, and creating value through new ventures.</span> It turns ideas into sustainable businesses, and is the <b>4th factor of production</b> alongside land, labor, capital — the function that organizes the other three.</p>
     <p><b>Innovation Sweet Spot</b> — good innovation sits where 3 circles overlap:</p>
     <ul>
-      <li><b>Desirability</b> — do people actually want it? (the human lens)</li>
+      <li><b>Desirability</b> — do people actually want it? (human lens)</li>
       <li><b>Feasibility</b> — can it technically be built/delivered?</li>
-      <li><b>Viability</b> — can the business make money and sustain itself?</li>
+      <li><b>Viability</b> — can the business make money &amp; sustain itself?</li>
     </ul>
-    <div class="tip">All 3 must overlap. Missing one: desirable+feasible but not viable = no business; desirable+viable but not feasible = can't build it.</div>
+    <div class="tip">Missing one: desirable+feasible but not viable = no business; desirable+viable but not feasible = can't build it.</div>
   </div>
 
   <div class="card biz">
-    <h3><span class="lecnum">L1 ·</span> Design Thinking Process &amp; the DT↔Business Link</h3>
-    <p><span class="term">Design Thinking (Stanford d.school)</span> — a 5-stage process that starts with <b>people and their needs</b>, not with technology or a business plan:</p>
+    <h3><span class="lecnum">L1 ·</span> Design Thinking Process &amp; DT↔Business <span class="crit p">P3</span><span class="crit p">P4</span></h3>
+    <p><span class="term">Design Thinking (Stanford d.school)</span> — a 5-stage process that starts with <b>people and their needs</b>, not tech or a business plan:</p>
     <p class="formula">Empathize → Define → Ideate → Prototype → Test</p>
     <ul>
       <li><b>Empathize</b> — understand the user deeply</li>
@@ -159,206 +103,191 @@
       <li><b>Prototype</b> — build cheap, rough versions</li>
       <li><b>Test</b> — put them in front of users and learn</li>
     </ul>
-    <p><i>Airbnb example:</i> bookings were flat → they discovered listing photos were poor → sent professional photographers → bookings rose. They solved a <b>user problem</b>, not a tech problem.</p>
-    <div class="tip">Design Thinking decides <b>WHAT</b> to build (the right problem/solution); Entrepreneurship decides <b>HOW</b> to deliver and scale it. Both rely on experimentation, iteration, and learning from users.</div>
+    <p><i>Airbnb:</i> bookings were flat → listing photos were poor → sent photographers → bookings rose. A <b>user</b> fix, not a tech fix.</p>
+    <div class="tip">Design Thinking decides <b>WHAT</b> to build; Entrepreneurship decides <b>HOW</b> to deliver &amp; scale it.</div>
   </div>
 
   <div class="card biz">
-    <h3><span class="lecnum">L1 ·</span> 3Ms, Growth Mindset, Agility &amp; Teams</h3>
-    <p><span class="term">The 3Ms of entrepreneurship</span> — three things every founder must manage together:</p>
+    <h3><span class="lecnum">L1 ·</span> 3Ms, Mindset, Agility &amp; Teams <span class="crit p">P1</span></h3>
+    <p><span class="term">The 3Ms</span> — what every founder manages together:</p>
     <ul>
-      <li><b>Mind</b> — your mindset; sets direction, resilience, adaptability</li>
-      <li><b>Market</b> — the map; where value exists and who needs what you build</li>
-      <li><b>Money</b> — the fuel; without it you can't go far, so manage it wisely</li>
+      <li><b>Mind</b> — mindset; sets direction, resilience, adaptability</li>
+      <li><b>Market</b> — the map; where value is &amp; who needs it</li>
+      <li><b>Money</b> — the fuel; manage it wisely or you stall</li>
     </ul>
-    <p><span class="term">Growth Mindset</span> = belief that ability grows through effort; failure is treated as <b>learning</b>. Core traits: Curiosity, Vision, Risk Tolerance, Resilience, Adaptability, Persistence.</p>
-    <p><span class="term">Business Agility</span> = ability to adapt quickly to changes in markets, tech, and customer needs. Built on rapid experimentation, continuous learning, iterative development, and flexible decision-making.</p>
-    <p><span class="term">High-Performance Teams</span> aren't just talented individuals — they collaborate effectively. <b>CATme</b> (Comprehensive Assessment of Team Member Effectiveness) is a peer-feedback system that raises accountability and exposes contribution imbalances.</p>
+    <p><span class="term">Growth Mindset</span> = ability grows through effort; failure = <b>learning</b>. Traits: Curiosity, Vision, Risk Tolerance, Resilience, Adaptability, Persistence.</p>
+    <p><span class="term">Business Agility</span> = adapt quickly to market/tech/customer change via rapid experimentation, continuous learning, iterative development, flexible decisions.</p>
+    <p><span class="term">High-Performance Teams</span> collaborate, not just have talent. <b>CATme</b> = peer-feedback system → raises accountability, exposes contribution imbalances.</p>
   </div>
 
   <div class="card biz">
-    <h3><span class="lecnum">L2 ·</span> PEST Analysis</h3>
-    <p><span class="term">PEST</span> <span class="def">= a framework for scanning the external <b>macro-environment</b> — the big forces outside the company that you can't control but must respond to.</span> Used when evaluating a new market or designing a business model.</p>
+    <h3><span class="lecnum">L2 ·</span> PEST Analysis <span class="crit m">M1</span></h3>
+    <p><span class="term">PEST</span> <span class="def">= scan of the external <b>macro-environment</b> — big forces outside the company you can't control but must respond to.</span> Used when evaluating a new market.</p>
     <table class="mini">
-      <tr><td>Political</td><td>Government policy, regulation, political stability, support for entrepreneurship, licenses, public funding</td></tr>
-      <tr><td>Economic</td><td>Inflation, interest rates, (un)employment, consumer purchasing power, availability of capital/credit</td></tr>
-      <tr><td>Social</td><td>Cultural values, demographics &amp; population trends, education/literacy, lifestyle and social trends</td></tr>
-      <tr><td>Technological</td><td>Internet/mobile access, infrastructure &amp; connectivity, emerging technologies, digital tools/platforms</td></tr>
+      <tr><td>Political</td><td>Policy, regulation, stability, support for entrepreneurship, licenses, public funding</td></tr>
+      <tr><td>Economic</td><td>Inflation, interest rates, (un)employment, purchasing power, capital/credit access</td></tr>
+      <tr><td>Social</td><td>Cultural values, demographics, education/literacy, lifestyle &amp; social trends</td></tr>
+      <tr><td>Technological</td><td>Internet/mobile, infrastructure, emerging tech, digital tools/platforms</td></tr>
     </table>
-    <div class="tip">PEST ≠ PESTEL. PESTEL adds <b>Environmental + Legal</b> (taught in the Design track). PEST feeds the <b>Opportunities &amp; Threats</b> of a SWOT.</div>
+    <div class="tip">PEST ≠ PESTEL (which adds Environmental + Legal). PEST feeds the <b>Opportunities &amp; Threats</b> of a SWOT.</div>
   </div>
 
   <div class="card biz">
-    <h3><span class="lecnum">L2 ·</span> SWOT Analysis</h3>
-    <p><span class="term">SWOT</span> <span class="def">= a snapshot of where you stand, splitting factors into internal vs external and positive vs negative.</span></p>
+    <h3><span class="lecnum">L2 ·</span> SWOT Analysis <span class="crit m">M1</span></h3>
     <table class="mini">
       <tr><th></th><th>Positive</th><th>Negative</th></tr>
-      <tr><td>Internal</td><td><b>Strengths</b> — what you do well (skilled team, IP)</td><td><b>Weaknesses</b> — what you lack (no funding, no brand)</td></tr>
-      <tr><td>External</td><td><b>Opportunities</b> — market trends/gaps you can exploit</td><td><b>Threats</b> — competition, regulation, new entrants</td></tr>
+      <tr><td>Internal</td><td><b>Strengths</b> — what you do well</td><td><b>Weaknesses</b> — what you lack</td></tr>
+      <tr><td>External</td><td><b>Opportunities</b> — trends/gaps</td><td><b>Threats</b> — competition, regulation</td></tr>
     </table>
-    <p><b>How to classify in the exam:</b> ask two questions — (1) is it <b>inside</b> the company (something you own/control) or <b>outside</b>? (2) is it good or bad? A new competitor lowering prices = outside + bad = <b>Threat</b>. A strong technical team = inside + good = <b>Strength</b>.</p>
-    <div class="tip">S+W are <b>internal</b>; O+T are <b>external</b>. PEST informs the O and T.</div>
+    <p><b>How to classify:</b> (1) is it <b>inside</b> the company or <b>outside</b>? (2) good or bad? New competitor cutting prices = outside + bad = <b>Threat</b>. Strong team = inside + good = <b>Strength</b>.</p>
+    <div class="tip">S+W = internal; O+T = external. PEST informs the O and T.</div>
   </div>
 
   <div class="card biz">
-    <h3><span class="lecnum">L3 ·</span> Entrepreneurship Approaches</h3>
-    <p><span class="term">Lean Startup</span> — eliminate waste by testing before scaling. Runs the <b>Build → Measure → Learn</b> loop: build an <b>MVP</b> (Minimum Viable Product — the smallest thing that tests your key hypothesis), measure real user behaviour, then decide to <b>pivot</b> (change direction) or <b>persevere</b>. <i>Dropbox tested demand with a demo video before writing code.</i></p>
-    <p><span class="term">Agile</span> — iterative development in short <b>sprints</b> with continuous delivery and feedback; flexibility to change direction on new information. Originally software, now used broadly.</p>
-    <p><span class="term">Tech-led vs Design-led</span> — "we built it because we could" vs "we built it because they needed it." Best innovations are both, but always <b>start from the human need</b>.</p>
-    <p><span class="term">Social Entrepreneurship</span> — creates social/environmental value using business methods (not pure charity). <i>Grameen Bank: microfinance for the poor.</i></p>
-    <div class="tip">Lean (validate fast, kill waste) and Agile (adapt in cycles) <b>complement</b> each other — they're not opposites. Best fit for limited resources + uncertain market + likely pivot = <b>Lean</b>.</div>
+    <h3><span class="lecnum">L3 ·</span> Entrepreneurship Approaches <span class="crit p">P2</span><span class="crit d">D1</span></h3>
+    <p><span class="term">Lean Startup</span> — kill waste by testing before scaling. <b>Build → Measure → Learn</b>; build an <b>MVP</b> (smallest thing that tests your key hypothesis), measure real behaviour, then <b>pivot</b> or <b>persevere</b>. <i>Dropbox tested demand with a demo video before coding.</i></p>
+    <p><span class="term">Agile</span> — iterative <b>sprints</b>, continuous delivery + feedback, flexible direction.</p>
+    <p><span class="term">Tech-led vs Design-led</span> — "built it because we could" vs "because they needed it." Best = both, but start from human need.</p>
+    <p><span class="term">Social Entrepreneurship</span> — social/environmental value via business methods. <i>Grameen Bank microfinance.</i></p>
+    <div class="tip">Lean &amp; Agile <b>complement</b> each other. Limited resources + uncertain market + likely pivot → choose <b>Lean</b> (D1: justify by integrating O&amp;T, resources, team, goals).</div>
   </div>
 
   <div class="card biz">
-    <h3><span class="lecnum">L4 ·</span> Business Model Canvas — 9 Building Blocks</h3>
-    <p><span class="term">BMC</span> <span class="def">= a one-page strategic tool to visualise how a business creates, delivers, and captures value.</span> Layout logic: <b>right</b> = market/customer, <b>centre</b> = value, <b>left</b> = operations, <b>bottom</b> = money. It asks: is the model <b>Desirable, Feasible, Viable</b>?</p>
+    <h3><span class="lecnum">L4 ·</span> Business Model Canvas — 9 Blocks <span class="crit p">P8</span><span class="crit d">D4</span></h3>
+    <p><span class="term">BMC</span> <span class="def">= one-page tool to visualise how a business creates, delivers &amp; captures value.</span> Right = market, centre = value, left = operations, bottom = money. Asks: Desirable? Feasible? Viable?</p>
     <table class="mini">
-      <tr><td>Customer Segments</td><td>Groups you serve (demographic / geographic / behavioural / psychographic). <b>No defined segment = no customer.</b></td></tr>
-      <tr><td>Value Proposition</td><td>The unique value you offer; what problem you solve &amp; why you're different. Ties to Jobs/Pains/Gains.</td></tr>
-      <tr><td>Channels</td><td>How you reach/deliver: sales, communication, distribution channels.</td></tr>
-      <tr><td>Customer Relationships</td><td>Personal assistance / self-service / automated services.</td></tr>
-      <tr><td>Revenue Streams</td><td>How you earn from each segment: product sales, service fees, subscriptions, licensing, advertising.</td></tr>
-      <tr><td>Key Resources</td><td>Assets needed: physical, intellectual (IP), human, financial.</td></tr>
-      <tr><td>Key Activities</td><td>Most important actions: production, marketing/sales, distribution, customer service.</td></tr>
-      <tr><td>Key Partners</td><td>External help: suppliers, manufacturers, distributors, alliances, investors.</td></tr>
-      <tr><td>Cost Structure</td><td>All costs to operate: fixed + variable; economies of scale &amp; scope.</td></tr>
+      <tr><td>Customer Segments</td><td>Who you serve (demo/geo/behaviour/psycho). No segment = no customer.</td></tr>
+      <tr><td>Value Proposition</td><td>Unique value; what problem &amp; why different. Ties to Jobs/Pains/Gains.</td></tr>
+      <tr><td>Channels</td><td>Reach/deliver: sales, communication, distribution.</td></tr>
+      <tr><td>Customer Relationships</td><td>Personal / self-service / automated.</td></tr>
+      <tr><td>Revenue Streams</td><td>Sales, service fees, subscription, licensing, advertising.</td></tr>
+      <tr><td>Key Resources</td><td>Physical, intellectual (IP), human, financial.</td></tr>
+      <tr><td>Key Activities</td><td>Production, marketing/sales, distribution, service.</td></tr>
+      <tr><td>Key Partners</td><td>Suppliers, manufacturers, distributors, alliances, investors.</td></tr>
+      <tr><td>Cost Structure</td><td>Fixed + variable; economies of scale &amp; scope.</td></tr>
     </table>
-    <div class="tip">Common mistakes: too many segments (pick a <b>beachhead</b>), a vague value proposition, unrealistic revenue projections, ignoring costs. A "best single change" exam answer usually fixes <b>desirability + feasibility + viability at once</b> (e.g. add a key partner that fixes the core failure and unlocks recurring revenue).</div>
+    <div class="tip">Mistakes: too many segments (pick a <b>beachhead</b>), vague VP, unrealistic revenue, ignoring costs. <b>D4 "best single change"</b> = one fix that improves desirability + feasibility + viability at once (e.g. a key partner that fixes the core failure &amp; unlocks recurring revenue).</div>
   </div>
 
   <div class="card biz">
-    <h3><span class="lecnum">L5 ·</span> Value Proposition Canvas</h3>
-    <p>Zooms into two BMC blocks (Value Proposition ↔ Customer Segment) to check they actually match.</p>
-    <p><b>Customer Profile (right side):</b></p>
-    <ul>
-      <li><b>Jobs</b> — tasks the customer wants done (functional, emotional, social)</li>
-      <li><b>Pains</b> — frustrations, risks, negative emotions they want to avoid</li>
-      <li><b>Gains</b> — positive outcomes they desire</li>
-    </ul>
-    <p><b>Value Map (left side):</b></p>
-    <ul>
-      <li><b>Products &amp; Services</b> — what you offer</li>
-      <li><b>Pain Relievers</b> — how you reduce their pains</li>
-      <li><b>Gain Creators</b> — extra benefits you produce</li>
-    </ul>
-    <p><span class="term">Fit</span> = when your Pain Relievers address real Pains and your Gain Creators deliver real Gains.</p>
-    <p><b>VP statement template:</b> "[Product] helps [target customer] achieve [key benefit] by [how it solves their pain]." <i>Uber: a fast, reliable, affordable ride at the tap of a button — no waiting, no negotiation, no cash.</i></p>
-    <div class="tip">Exam cue: "saves users an hour a day" = a <b>Gain</b>. "Reduces long delivery waits" = relieving a <b>Pain</b>.</div>
+    <h3><span class="lecnum">L5 ·</span> Value Proposition Canvas <span class="crit p">P6</span></h3>
+    <p>Zooms into Value Proposition ↔ Customer Segment to check they match.</p>
+    <p><b>Customer Profile (right):</b> <b>Jobs</b> (functional/emotional/social) · <b>Pains</b> (frustrations, risks) · <b>Gains</b> (desired outcomes).</p>
+    <p><b>Value Map (left):</b> <b>Products &amp; Services</b> · <b>Pain Relievers</b> · <b>Gain Creators</b>.</p>
+    <p><span class="term">Fit</span> = Pain Relievers address real Pains and Gain Creators deliver real Gains.</p>
+    <p><b>VP statement:</b> "[Product] helps [customer] achieve [benefit] by [solving pain]." <i>Uber: a fast, reliable, affordable ride at the tap of a button — no waiting, no negotiation, no cash.</i></p>
+    <div class="tip">"Saves an hour a day" = a <b>Gain</b>. "Reduces long delivery waits" = relieving a <b>Pain</b>.</div>
   </div>
 
   <div class="card biz">
-    <h3><span class="lecnum">L5 ·</span> Markets &amp; B2B vs B2C</h3>
-    <p><span class="term">Market</span> = a system where buyers and sellers exchange goods/services; can be local→global. Types: consumer, financial, business, online.</p>
+    <h3><span class="lecnum">L5 ·</span> Markets &amp; B2B vs B2C <span class="crit p">P5</span></h3>
+    <p><span class="term">Market</span> = system where buyers &amp; sellers exchange. Types: consumer, financial, business, online.</p>
     <table class="mini">
       <tr><th>B2B (to businesses)</th><th>B2C (to consumers)</th></tr>
       <tr><td>Rational, ROI-driven</td><td>Emotional, personal</td></tr>
-      <tr><td>Long sales cycles</td><td>Short cycles</td></tr>
-      <tr><td>Multiple decision-makers</td><td>Usually one buyer</td></tr>
+      <tr><td>Long cycles</td><td>Short cycles</td></tr>
+      <tr><td>Many decision-makers</td><td>Usually one buyer</td></tr>
     </table>
-    <div class="tip">If the <b>user isn't the payer</b> (e.g. procurement buys, employees use) you're in a "system game" with B2B dynamics — design for the decision-maker, not just the user.</div>
+    <div class="tip">If the <b>user isn't the payer</b> you're in a "system game" with B2B dynamics — design for the decision-maker.</div>
   </div>
 
   <div class="card biz">
-    <h3><span class="lecnum">L5 ·</span> Diffusion of Innovation</h3>
-    <p>How a new product spreads through a population over time — five adopter groups:</p>
+    <h3><span class="lecnum">L5 ·</span> Diffusion of Innovation <span class="crit p">P5</span></h3>
     <table class="mini">
-      <tr><td>Innovators 2.5%</td><td>Risk-takers; try things first, before they're proven</td></tr>
-      <tr><td>Early Adopters 13.5%</td><td>Visionaries/opinion leaders; spot the benefit early</td></tr>
-      <tr><td>Early Majority 34%</td><td>Pragmatists; adopt once it's somewhat proven; risk-averse</td></tr>
+      <tr><td>Innovators 2.5%</td><td>Risk-takers; try first, before it's proven</td></tr>
+      <tr><td>Early Adopters 13.5%</td><td>Visionaries/opinion leaders; spot benefit early</td></tr>
+      <tr><td>Early Majority 34%</td><td>Pragmatists; risk-averse; adopt once proven</td></tr>
       <tr><td>Late Majority 34%</td><td>Skeptics; price-sensitive; adopt late</td></tr>
-      <tr><td>Laggards 16%</td><td>Traditionalists; last to adopt, if ever</td></tr>
+      <tr><td>Laggards 16%</td><td>Traditionalists; last to adopt</td></tr>
     </table>
-    <div class="tip">Your <b>SOM</b> (first customers) = Innovators + Early Adopters (~16%). They tolerate an unfinished product because they want the benefit now.</div>
+    <div class="tip">Your <b>SOM</b> (first customers) = Innovators + Early Adopters (~16%) — they tolerate an unfinished product.</div>
   </div>
 
   <div class="card key">
-    <h3><span class="lecnum">L5 ·</span> ★ TAM / SAM / SOM — Market Sizing</h3>
-    <p>Three nested estimates of market size, from biggest to most realistic:</p>
-    <p><span class="term">TAM — Total Addressable Market:</span> maximum demand if 100% of all possible users adopted. The whole pie.</p>
-    <p><span class="term">SAM — Serviceable Available Market:</span> the slice of TAM you can realistically serve given geography, language, constraints.</p>
+    <h3><span class="lecnum">L5 ·</span> ★ TAM / SAM / SOM — Market Sizing <span class="crit p">P5</span></h3>
+    <p><span class="term">TAM</span> = max demand if 100% adopt (whole pie). <span class="term">SAM</span> = slice you can realistically serve (geo/constraints). <span class="term">SOM</span> = slice you actually capture short-term (1–3 yrs), your "entry wedge."</p>
     <p class="formula">SAM = TAM × target-segment %</p>
-    <p><span class="term">SOM — Serviceable Obtainable Market:</span> the slice of SAM you can actually capture short-term (1–3 yrs) given competition and capacity. Your "entry wedge."</p>
     <p class="formula">SOM = SAM × market-share (conversion) %</p>
     <div class="ex"><b class="h">Worked example</b>
-      3,000,000 smartphone users; 60% health-conscious; 25% of those willing &amp; able to pay; 10% Year-1 conversion.
+      3,000,000 smartphone users; 60% health-conscious; 25% willing &amp; able to pay; 10% Year-1 conversion.
       <ul class="steps">
         <li>TAM = <b>3,000,000</b></li>
-        <li>SAM = 3,000,000 × 60% × 25% = 1,800,000 × 25% = <b>450,000</b></li>
+        <li>SAM = 3,000,000 × 60% × 25% = <b>450,000</b></li>
         <li>SOM = 450,000 × 10% = <b>45,000</b></li>
-        <li>Annual revenue from SOM = users × monthly price × 12</li>
+        <li>Annual SOM revenue = users × monthly price × 12</li>
       </ul>
     </div>
-    <div class="tip">If price rises, fewer people are "willing &amp; able" → the <b>% shrinks → SAM shrinks → SOM shrinks</b>. Cap SOM at your operational capacity if conversion would exceed it.</div>
+    <div class="tip">Higher price → fewer "willing &amp; able" → <b>SAM shrinks → SOM shrinks</b>. Cap SOM at operational capacity.</div>
   </div>
 
   <div class="card biz">
-    <h3><span class="lecnum">L6 ·</span> Competitor Analysis &amp; USP</h3>
-    <p><b>Competitor types:</b> <b>Direct</b> (same product, same audience), <b>Indirect</b> (different product, same customer need), <b>Emerging</b> (new entrants with disruption potential).</p>
-    <p><span class="term">Benchmarking</span> = comparing your performance/products against rivals. A <b>Moon Chart</b> (radar/spider chart) plots several competitors across several attributes at once — great for spotting strengths/weaknesses visually.</p>
-    <p><span class="term">Brand Positioning / Perceptual Map</span> = plot brands on 2 key attributes (e.g. Price vs Quality). Empty regions = <b>market gaps</b> = under-served opportunities.</p>
-    <p><span class="term">USP (Unique Selling Point)</span> = the feature/benefit that makes you stand out. Must be <b>Unique, Valuable, and Clear</b>. It lives where "what customers want" meets "what competitors do poorly."</p>
+    <h3><span class="lecnum">L6 ·</span> Competitor Analysis &amp; USP <span class="crit p">P6</span></h3>
+    <p><b>Competitor types:</b> <b>Direct</b> (same product+audience), <b>Indirect</b> (different product, same need), <b>Emerging</b> (disruptive new entrants).</p>
+    <p><span class="term">Benchmarking</span> = comparing vs rivals. A <b>Moon Chart</b> (radar/spider chart) plots several competitors across several attributes at once.</p>
+    <p><span class="term">Perceptual / Positioning Map</span> = plot brands on 2 attributes (e.g. Price vs Quality); empty regions = <b>market gaps</b> = opportunities.</p>
+    <p><span class="term">USP</span> = the standout feature/benefit. Must be <b>Unique, Valuable, Clear</b> — where "what customers want" meets "what rivals do poorly."</p>
     <div class="tip">Benchmarking reveals where you outperform → that gap becomes your USP.</div>
   </div>
 
   <div class="card key">
-    <h3><span class="lecnum">L6 ·</span> ★ Pricing Strategies</h3>
+    <h3><span class="lecnum">L6 ·</span> ★ Pricing Strategies <span class="crit m">M3</span></h3>
     <table class="mini">
-      <tr><td>Cost-Plus</td><td><b>Price = production cost + markup %.</b> Simple, guarantees a margin, but ignores what customers will actually pay.</td></tr>
-      <tr><td>Value-Based</td><td>Price on <b>perceived customer value</b>, not cost. Needs strong differentiation &amp; knowledge of willingness-to-pay. Used for luxury/branded goods.</td></tr>
-      <tr><td>Competitive</td><td>Price set against rivals (below/at/above). Used when products are similar (low differentiation).</td></tr>
-      <tr><td>Penetration</td><td><b>Low</b> entry price to grab market share fast, raise later. Best for price-sensitive markets with alternatives. Risk: attracts price-chasers.</td></tr>
-      <tr><td>Skimming</td><td><b>High</b> price first (early adopters who'll pay a premium), lower over time to reach the mass market. <i>New iPhone launch.</i></td></tr>
-      <tr><td>Psychological</td><td>Prices that <i>feel</i> cheaper/better: charm ($9.99), prestige, bundling, anchoring, artificial scarcity.</td></tr>
+      <tr><td>Cost-Plus</td><td><b>Price = cost + markup %.</b> Simple, guarantees a margin; ignores willingness to pay.</td></tr>
+      <tr><td>Value-Based</td><td>Price on <b>perceived value</b>, not cost. Needs strong differentiation. Luxury/branded.</td></tr>
+      <tr><td>Competitive</td><td>Price vs rivals (below/at/above). Used when products are similar.</td></tr>
+      <tr><td>Penetration</td><td><b>Low</b> entry price to grab share fast, raise later. Price-sensitive markets. Risk: price-chasers.</td></tr>
+      <tr><td>Skimming</td><td><b>High</b> price first (premium early adopters), lower over time. <i>New iPhone.</i></td></tr>
+      <tr><td>Psychological</td><td>Feels cheaper/better: charm ($9.99), prestige, bundling, anchoring, scarcity.</td></tr>
     </table>
-    <div class="tip">Risk-averse, budget-conscious buyers at launch (e.g. municipalities) → <b>penetration + strong promotion</b> to lower barriers and build trust. Premium/skimming would be rejected.</div>
+    <div class="tip">Risk-averse, budget-conscious buyers at launch → <b>penetration + strong promotion</b>; premium/skimming would be rejected.</div>
   </div>
 
   <div class="card biz">
-    <h3><span class="lecnum">L7 ·</span> 4Ps of Marketing (→ 7Ps)</h3>
-    <p>The <span class="term">Marketing Mix</span> — the levers you control to take a product to market. Each P must align with the others and with the target customer.</p>
+    <h3><span class="lecnum">L7 ·</span> 4Ps of Marketing (→ 7Ps) <span class="crit m">M3</span></h3>
+    <p>The <span class="term">Marketing Mix</span> — levers to take a product to market; each P must align with the others &amp; the target customer.</p>
     <table class="mini">
-      <tr><td>Product</td><td>What you sell: features, quality, design, branding, packaging. Core product (the benefit) vs augmented (warranty, support). Lifecycle: Introduction→Growth→Maturity→Decline.</td></tr>
-      <tr><td>Price</td><td>What customers pay; signals value and positions the brand (see pricing strategies).</td></tr>
-      <tr><td>Place</td><td>How &amp; <b>where/when</b> customers access it: direct (own store/site), indirect (retailers/distributors), digital (app stores, marketplaces). <i>Changing delivery windows/routes = a Place decision.</i></td></tr>
-      <tr><td>Promotion</td><td>How you communicate value: advertising, PR, social, content, sales promotions. IMC = one consistent message across channels.</td></tr>
+      <tr><td>Product</td><td>Features, quality, design, branding. Core (benefit) vs augmented (warranty). Lifecycle: Intro→Growth→Maturity→Decline.</td></tr>
+      <tr><td>Price</td><td>What customers pay; signals value, positions brand.</td></tr>
+      <tr><td>Place</td><td>How &amp; <b>where/when</b> they access it: direct / indirect / digital. <i>New delivery windows/routes = Place.</i></td></tr>
+      <tr><td>Promotion</td><td>Communicate value: advertising, PR, social, content, sales promos. IMC = one consistent message.</td></tr>
     </table>
-    <p><span class="term">7Ps (services)</span> add: <b>People</b> (who delivers it), <b>Process</b> (how it's delivered), <b>Physical Evidence</b> (tangible cues of quality).</p>
-    <div class="tip">Exam classify: a discount = <b>Price</b>; a new meal bundle = <b>Product</b>; an influencer campaign = <b>Promotion</b>; evening delivery windows = <b>Place</b>.</div>
+    <p><span class="term">7Ps (services)</span> add <b>People</b>, <b>Process</b>, <b>Physical Evidence</b>.</p>
+    <div class="tip">Classify: discount = <b>Price</b>; meal bundle = <b>Product</b>; influencer = <b>Promotion</b>; evening delivery = <b>Place</b>.</div>
   </div>
 
   <div class="card biz">
-    <h3><span class="lecnum">L8 ·</span> Cost, Revenue &amp; Finance Basics</h3>
-    <p>Entrepreneurship = creativity + <b>resource management</b>. Finance helps you survive, plan, grow, and reduce uncertainty. Most startups fail from <b>financial mismanagement</b>, not bad ideas.</p>
-    <p><b>Common mistakes:</b> underestimating costs, overestimating revenue, spending before validating demand, poor cash-flow management.</p>
+    <h3><span class="lecnum">L8 ·</span> Cost, Revenue &amp; Finance Basics <span class="crit p">P7</span></h3>
+    <p>Entrepreneurship = creativity + <b>resource management</b>. Finance helps you survive, plan, grow, reduce uncertainty. Most startups fail from <b>financial mismanagement</b>, not bad ideas.</p>
+    <p><b>Common mistakes:</b> underestimating costs, overestimating revenue, spending before validating, poor cash-flow management.</p>
     <table class="mini">
-      <tr><td>Startup Costs</td><td>One-time costs to launch before any revenue: equipment, legal, website, initial inventory, licenses.</td></tr>
-      <tr><td>Fixed Costs</td><td>Don't change with volume: rent, salaries, insurance, software. Present whether you sell 0 or 10,000 units.</td></tr>
-      <tr><td>Variable Costs</td><td>Scale with output: raw materials, packaging, delivery, sales commissions.</td></tr>
+      <tr><td>Startup Costs</td><td>One-time, before revenue: equipment, legal, website, inventory, licenses.</td></tr>
+      <tr><td>Fixed Costs</td><td>Don't change with volume: rent, salaries, insurance, software.</td></tr>
+      <tr><td>Variable Costs</td><td>Scale with output: materials, packaging, delivery, commissions.</td></tr>
     </table>
-    <p class="formula">Total Cost = Fixed Costs + (Variable cost/unit × Units)</p>
-    <p><b>Projected Revenue</b> answers WHO buys, WHAT they buy, and what they PAY — grounded in research, not hope. Use a <b>bottom-up</b> estimate (start from individual customer behaviour and scale up); avoid the "if we just get 1% of the market" fallacy.</p>
+    <p class="formula">Total Cost = Fixed + (Variable/unit × Units)</p>
+    <p><b>Projected Revenue</b> answers WHO buys, WHAT, at what PRICE. Use a <b>bottom-up</b> estimate; avoid the "just get 1% of the market" fallacy.</p>
   </div>
 
 </div>
 
 <!-- ============ FINANCE DEEP DIVE ============ -->
-<div class="sec-head keyh">💰 FINANCE DEEP-DIVE <small>— L9 + the Merit/Distinction calculation engine. Master these worked methods.</small></div>
+<div class="sec-head keyh">💰 FINANCE DEEP-DIVE <small>— L9 + the Merit/Distinction calculation engine</small></div>
 <div class="cols">
 
   <div class="card key">
-    <h3>The Three Financial Statements</h3>
+    <h3>The Three Financial Statements <span class="crit m">M4</span></h3>
     <table class="mini">
-      <tr><td>Income Statement (P&amp;L)</td><td>Revenue − Costs = Profit/Loss <b>over a period</b>. Shows profitability.</td></tr>
-      <tr><td>Balance Sheet</td><td><b>Assets = Liabilities + Equity</b> at a single <b>point in time</b> (a snapshot).</td></tr>
-      <tr><td>Cash Flow Statement</td><td>Actual cash <b>in and out</b> over a period — not the same as profit.</td></tr>
+      <tr><td>Income (P&amp;L)</td><td>Revenue − Costs = Profit/Loss <b>over a period</b>. Shows profitability.</td></tr>
+      <tr><td>Balance Sheet</td><td><b>Assets = Liabilities + Equity</b> at a single <b>point in time</b>.</td></tr>
+      <tr><td>Cash Flow</td><td>Actual cash <b>in &amp; out</b> over a period — not the same as profit.</td></tr>
     </table>
-    <p><b>Key terms:</b> Revenue = total income from sales. <b>COGS</b> = cost of goods sold (direct cost of producing what you sold). <b>OpEx</b> = operating expenses (running the business: marketing, admin, rent).</p>
-    <div class="tip">Profitable ≠ cash-positive. You can record a sale (profit) before the customer pays, so cash can be negative while profit is positive. <b>Burn rate</b> = how fast a startup spends its cash reserves.</div>
+    <p><b>Key terms:</b> Revenue = total sales income. <b>COGS</b> = direct cost of what you sold. <b>OpEx</b> = running costs (marketing, admin, rent).</p>
+    <div class="tip">Profitable ≠ cash-positive: you can book a sale before the customer pays. <b>Burn rate</b> = how fast reserves are spent.</div>
   </div>
 
   <div class="card frame">
-    <h3>📄 Income Statement (P&amp;L) — layout</h3>
-    <p class="def">A "waterfall": start at sales, subtract costs in layers down to the bottom line. Covers a <b>period</b> (e.g. a year).</p>
+    <h3>📄 Income Statement (P&amp;L) — layout <span class="crit m">M4</span></h3>
+    <p class="def">A "waterfall": from sales, subtract costs in layers down to the bottom line. Covers a <b>period</b>.</p>
     <table class="stmt">
       <tr><td>Revenue (Sales)</td><td>1,000,000</td></tr>
       <tr class="neg"><td>− Cost of Goods Sold (COGS)</td><td>(600,000)</td></tr>
@@ -369,18 +298,13 @@
       <tr class="neg"><td>− Tax</td><td>(30,000)</td></tr>
       <tr class="tot"><td>= Net Profit</td><td>100,000</td></tr>
     </table>
-    <p><b>Tips to calculate:</b></p>
-    <ul>
-      <li>Work <b>strictly top-down</b>; each subtotal feeds the next line.</li>
-      <li>Only <b>direct production</b> costs go in COGS; running costs (rent, marketing, admin, depreciation) go in OpEx.</li>
-      <li>GPM = Gross Profit ÷ Revenue; NPM = Net Profit ÷ Revenue.</li>
-    </ul>
-    <div class="tip">Here GPM = 400,000/1,000,000 = 40%; NPM = 100,000/1,000,000 = 10%.</div>
+    <p><b>Tips:</b> work <b>top-down</b> (each subtotal feeds the next). Only <b>direct production</b> costs in COGS; running costs (rent, marketing, admin, depreciation) in OpEx.</p>
+    <div class="tip">GPM = 400,000/1,000,000 = 40%; NPM = 100,000/1,000,000 = 10%.</div>
   </div>
 
   <div class="card frame">
-    <h3>📄 Balance Sheet — layout</h3>
-    <p class="def">A <b>snapshot</b> at one date. Must always balance: <b>Assets = Liabilities + Equity</b>.</p>
+    <h3>📄 Balance Sheet — layout <span class="crit m">M4</span></h3>
+    <p class="def">A <b>snapshot</b> at one date. Always balances: <b>Assets = Liabilities + Equity</b>.</p>
     <table class="stmt">
       <tr><td class="grp">ASSETS</td><td></td></tr>
       <tr><td>Cash</td><td>50,000</td></tr>
@@ -398,75 +322,64 @@
       <tr><td class="grp">EQUITY</td><td>200,000</td></tr>
       <tr class="tot"><td>Liabilities + Equity</td><td>500,000</td></tr>
     </table>
-    <p><b>Tips to calculate:</b></p>
-    <ul>
-      <li>If two of Assets / Liabilities / Equity are given, find the third by rearranging <b>Equity = Assets − Liabilities</b>.</li>
-      <li><b>Current</b> = due/usable within 1 year (cash, receivables, inventory, payables). <b>Non-current</b> = long-term (equipment, long-term loans).</li>
-      <li>Current Ratio = Current Assets ÷ Current Liabilities = 200,000/150,000 = <b>1.33</b>.</li>
-    </ul>
-    <div class="tip">If it doesn't balance, you've missed an item or mis-signed one — recheck before answering.</div>
+    <p><b>Tips:</b> solve a missing figure via <b>Equity = Assets − Liabilities</b>. <b>Current</b> = within 1 yr; <b>non-current</b> = long-term. Current Ratio = 200,000/150,000 = <b>1.33</b>.</p>
+    <div class="tip">If it doesn't balance, you missed or mis-signed an item — recheck.</div>
   </div>
 
   <div class="card frame">
-    <h3>📄 Cash Flow Statement — layout</h3>
-    <p class="def">Tracks actual <b>cash in/out</b> over a period, in three buckets, ending at the change in the bank balance.</p>
+    <h3>📄 Cash Flow Statement — layout <span class="crit m">M4</span></h3>
+    <p class="def">Actual <b>cash in/out</b> over a period, in three buckets, ending at the bank balance.</p>
     <table class="stmt">
-      <tr><td class="grp">OPERATING (day-to-day trading)</td><td></td></tr>
-      <tr><td>Cash from customers − cash paid out</td><td>120,000</td></tr>
-      <tr><td class="grp">INVESTING (buying/selling assets)</td><td></td></tr>
+      <tr><td class="grp">OPERATING (trading)</td><td></td></tr>
+      <tr><td>Cash from customers − cash paid</td><td>120,000</td></tr>
+      <tr><td class="grp">INVESTING (assets)</td><td></td></tr>
       <tr class="neg"><td>Bought equipment</td><td>(300,000)</td></tr>
-      <tr><td class="grp">FINANCING (loans/investment/owners)</td><td></td></tr>
-      <tr><td>Loan + investor funds received</td><td>250,000</td></tr>
+      <tr><td class="grp">FINANCING (loans/equity)</td><td></td></tr>
+      <tr><td>Loan + investor funds</td><td>250,000</td></tr>
       <tr class="sub"><td>Net change in cash</td><td>70,000</td></tr>
       <tr><td>+ Opening cash</td><td>30,000</td></tr>
       <tr class="tot"><td>= Closing cash</td><td>100,000</td></tr>
     </table>
-    <p><b>Tips to calculate:</b></p>
-    <ul>
-      <li>Sort every item into <b>Operating</b> (sales, salaries, rent), <b>Investing</b> (equipment, property), or <b>Financing</b> (loans, equity, repayments).</li>
-      <li>Net change = sum of all three buckets; <b>Closing = Opening + Net change</b>.</li>
-      <li>Cash outflows are negative — money received is +, money spent is −.</li>
-    </ul>
-    <div class="tip">A profitable firm can still show negative cash (e.g. big equipment purchase or unpaid invoices) — this statement reveals that, the P&amp;L doesn't.</div>
+    <p><b>Tips:</b> sort each item into <b>Operating</b> (sales, salaries, rent), <b>Investing</b> (equipment, property), or <b>Financing</b> (loans, equity). <b>Closing = Opening + Net change</b>; outflows are negative.</p>
+    <div class="tip">A profitable firm can be cash-negative (big purchase / unpaid invoices) — only this statement reveals it.</div>
   </div>
 
   <div class="card key">
-    <h3>★ Core Formulas (with meaning)</h3>
+    <h3>★ Core Formulas (with meaning) <span class="crit d">D3</span></h3>
     <p class="formula">Gross Profit = Revenue − COGS</p>
-    <p class="def">What's left after the direct cost of making the product. Measures production efficiency.</p>
+    <p class="def">Left after the direct cost of making the product — production efficiency.</p>
     <p class="formula">Net Profit = Gross Profit − OpEx − interest − tax</p>
-    <p class="def">The true "bottom line" after <b>all</b> costs.</p>
+    <p class="def">The true bottom line after <b>all</b> costs.</p>
     <p class="formula">Gross Profit Margin = Gross Profit ÷ Revenue × 100</p>
     <p class="formula">Net Profit Margin (NPM) = Net Profit ÷ Revenue × 100</p>
-    <p class="def">Margins = profit as a <b>% of revenue</b>; let you compare companies of different sizes.</p>
-    <p class="formula">ROI = (Gain − Cost) ÷ Cost × 100 = Net Profit ÷ Invested capital × 100</p>
-    <p class="def">Return per dinar invested. Higher = more efficient use of money.</p>
+    <p class="def">Profit as a <b>% of revenue</b> — compares companies of any size.</p>
+    <p class="formula">ROI = (Gain − Cost) ÷ Cost × 100 = Net Profit ÷ Invested × 100</p>
+    <p class="def">Return per dinar invested. Higher = more efficient.</p>
     <p class="formula">Current Ratio = Current Assets ÷ Current Liabilities</p>
-    <p class="def">Liquidity — can you cover short-term debts? ≥1.5 is a common lender threshold.</p>
+    <p class="def">Liquidity — can you cover short-term debts? ≥1.5 = common threshold.</p>
   </div>
 
   <div class="card key">
-    <h3>★ Breakeven Analysis</h3>
-    <p>The point where <b>Total Revenue = Total Costs</b> (zero profit/loss). Answers "how much must we sell to stop losing money?"</p>
-    <p class="formula">Contribution Margin (CM) = Price − Variable cost/unit</p>
-    <p class="def">What each unit contributes toward covering fixed costs.</p>
+    <h3>★ Breakeven Analysis <span class="crit p">P7</span><span class="crit d">D3</span></h3>
+    <p>The point where <b>Total Revenue = Total Costs</b> (zero profit). "How much must we sell to stop losing money?"</p>
+    <p class="formula">Contribution Margin (CM) = Price − Variable/unit</p>
     <p class="formula">Breakeven Units = Fixed Costs ÷ CM</p>
     <p class="formula">Breakeven Revenue = Breakeven Units × Price</p>
-    <div class="ex"><b class="h">Worked example — profit/loss position</b>
-      Café: Fixed = 40,000 · Price = 4 · Variable = 1.50 · Sold = 12,000 cups.
+    <div class="ex"><b class="h">Worked — profit/loss position</b>
+      Café: Fixed 40,000 · Price 4 · Variable 1.50 · Sold 12,000.
       <ul class="steps">
         <li>CM = 4 − 1.50 = <b>2.50/cup</b></li>
         <li>Total contribution = 12,000 × 2.50 = <b>30,000</b></li>
-        <li>Profit = 30,000 − 40,000 = <b>−10,000 → a loss</b></li>
-        <li>Breakeven = 40,000 ÷ 2.50 = <b>16,000 cups</b> (they sold too few)</li>
+        <li>Profit = 30,000 − 40,000 = <b>−10,000 (loss)</b></li>
+        <li>Breakeven = 40,000 ÷ 2.50 = <b>16,000 cups</b></li>
       </ul>
     </div>
-    <div class="tip">Trap: don't compare <b>revenue</b> to fixed costs. Compare <b>total contribution</b> (CM × units) to fixed costs.</div>
+    <div class="tip">Trap: compare <b>total contribution</b> (CM×units) to fixed costs — not revenue to fixed costs.</div>
   </div>
 
   <div class="card frame">
-    <h3>🧮 Worked: Net Profit with adjustments</h3>
-    <p>Sales 1,000,000 · COGS 520,000 · OpEx 280,000. Adjustments: reduce sales 15,000; move 30,000 delivery from COGS→OpEx; add depreciation 20,000 to OpEx.</p>
+    <h3>🧮 Worked: Net Profit with adjustments <span class="crit m">M4</span><span class="crit d">D3</span></h3>
+    <p>Sales 1,000,000 · COGS 520,000 · OpEx 280,000. Adjust: −15,000 sales; move 30,000 delivery COGS→OpEx; +20,000 depreciation to OpEx.</p>
     <ul class="steps">
       <li>Sales = 1,000,000 − 15,000 = <b>985,000</b></li>
       <li>COGS = 520,000 − 30,000 = <b>490,000</b></li>
@@ -474,64 +387,62 @@
       <li>Gross Profit = 985,000 − 490,000 = <b>495,000</b></li>
       <li>Net Profit = 495,000 − 330,000 = <b>165,000</b></li>
     </ul>
-    <div class="tip">Work top-down in order: adjust Sales → adjust COGS → Gross Profit → adjust OpEx → Net Profit.</div>
+    <div class="tip">Order: adjust Sales → COGS → Gross Profit → OpEx → Net Profit.</div>
   </div>
 
   <div class="card frame">
-    <h3>🧮 Worked: Reclassification &amp; margins (Distinction)</h3>
-    <p>Move a cost (e.g. shipping) from <b>COGS → OpEx</b>, nothing else changes:</p>
+    <h3>🧮 Worked: Reclassification &amp; margins <span class="crit d">D3</span></h3>
+    <p>Move a cost (e.g. shipping) <b>COGS → OpEx</b>, nothing else changes:</p>
     <ul class="steps">
       <li>COGS falls → Gross Profit rises → <b>GPM increases</b></li>
-      <li>But total expenses are unchanged → <b>Net Profit &amp; NPM stay the same</b></li>
+      <li>Total expenses unchanged → <b>Net Profit &amp; NPM stay the same</b></li>
     </ul>
-    <p>Reverse (OpEx → COGS): GPM <b>decreases</b>, NPM unchanged.</p>
-    <p>Add <b>depreciation to OpEx</b>: NPM <b>decreases</b>, GPM unchanged (depreciation isn't in COGS).</p>
-    <div class="tip">Golden rule: <b>moving</b> a cost between lines never changes Net Profit — it only changes where the cut shows up (Gross vs Net). Only <b>adding/removing</b> a cost changes Net Profit.</div>
+    <p>Reverse (OpEx→COGS): GPM <b>down</b>, NPM same. Add <b>depreciation to OpEx</b>: NPM <b>down</b>, GPM unchanged.</p>
+    <div class="tip">Golden rule: <b>moving</b> a cost between lines never changes Net Profit — only <b>adding/removing</b> one does.</div>
   </div>
 
   <div class="card frame">
-    <h3>🧮 Worked: Price rise vs cost cut</h3>
-    <p>Price 50 · unit COGS 32 · fixed OpEx 120,000 · volume 10,000.<br>Option 1: raise price to 52. Option 2: cut unit COGS to 30. (volume fixed)</p>
+    <h3>🧮 Worked: Price rise vs cost cut <span class="crit d">D3</span></h3>
+    <p>Price 50 · unit COGS 32 · fixed OpEx 120,000 · volume 10,000. Opt 1: price→52. Opt 2: COGS→30.</p>
     <ul class="steps">
-      <li><b>Opt 1:</b> Rev 520,000; NP = (52−32)×10,000 − 120,000 = 80,000; NPM = 80,000/520,000 = <b>15.4%</b></li>
-      <li><b>Opt 2:</b> Rev 500,000; NP = (50−30)×10,000 − 120,000 = 80,000; NPM = 80,000/500,000 = <b>16.0%</b></li>
+      <li><b>Opt 1:</b> Rev 520,000; NP = (52−32)×10,000 − 120,000 = 80,000; NPM = <b>15.4%</b></li>
+      <li><b>Opt 2:</b> Rev 500,000; NP = (50−30)×10,000 − 120,000 = 80,000; NPM = <b>16.0%</b></li>
     </ul>
-    <div class="tip">Same Net Profit on <b>lower revenue</b> = higher margin → the <b>cost cut wins</b> on NPM.</div>
+    <div class="tip">Same Net Profit on <b>lower revenue</b> = higher margin → the <b>cost cut wins</b>.</div>
   </div>
 
   <div class="card frame">
-    <h3>🧮 Worked: Viability thresholds (NPM &amp; ROI)</h3>
-    <p>Lender wants NPM ≥ 12%; investor wants ROI ≥ 20%.<br>Revenue 2,400,000 · COGS 1,380,000 · OpEx 960,000 · avg invested capital 150,000.</p>
+    <h3>🧮 Worked: Viability thresholds <span class="crit d">D3</span></h3>
+    <p>Lender wants NPM ≥ 12%; investor wants ROI ≥ 20%. Revenue 2,400,000 · COGS 1,380,000 · OpEx 960,000 · avg invested 150,000.</p>
     <ul class="steps">
       <li>Net Profit = 2,400,000 − 1,380,000 − 960,000 = <b>60,000</b></li>
       <li>NPM = 60,000 / 2,400,000 = <b>2.5% → FAILS 12%</b></li>
       <li>ROI = 60,000 / 150,000 = <b>40% → PASSES 20%</b></li>
     </ul>
-    <div class="tip">NPM and ROI measure different things — always test each threshold separately. NPM uses revenue; ROI uses invested capital.</div>
+    <div class="tip">NPM uses revenue, ROI uses invested capital — test each threshold separately.</div>
   </div>
 
   <div class="card frame">
-    <h3>🧮 Worked: ROI comparison</h3>
-    <p>Company A: invested 80,000, net profit 12,800. Company B: invested 60,000, net profit 9,000. Who's more efficient?</p>
+    <h3>🧮 Worked: ROI comparison <span class="crit d">D3</span></h3>
+    <p>Company A: invested 80,000, net profit 12,800. Company B: invested 60,000, net profit 9,000.</p>
     <ul class="steps">
       <li>A: 12,800 / 80,000 = <b>16%</b></li>
       <li>B: 9,000 / 60,000 = <b>15%</b></li>
-      <li><b>A wins</b> — higher return per dinar even if profits look similar.</li>
+      <li><b>A wins</b> — higher return per dinar.</li>
     </ul>
-    <div class="tip">Bigger absolute profit ≠ better. Always divide by what was invested (ROI) or by revenue (margin) to compare fairly.</div>
+    <div class="tip">Bigger absolute profit ≠ better — divide by invested (ROI) or revenue (margin) to compare fairly.</div>
   </div>
 
   <div class="card frame">
-    <h3>🧮 Worked: Comparing two revenue options</h3>
-    <p>Pick the option with the higher Net Profit Margin. Method for each option:</p>
+    <h3>🧮 Worked: Comparing two revenue options <span class="crit d">D3</span></h3>
+    <p>Pick the option with the higher NPM. For each option:</p>
     <ul class="steps">
-      <li>Add up all <b>new revenue</b> (existing + each new stream)</li>
-      <li>Add up all <b>variable costs</b> (per-unit × units, each stream)</li>
-      <li>Add all <b>fixed</b> costs (base + extra support)</li>
-      <li>Net Profit = Revenue − Variable − Fixed; NPM = NP ÷ Revenue</li>
+      <li>Sum all <b>new revenue</b> (base + each new stream)</li>
+      <li>Sum all <b>variable costs</b> (per-unit × units)</li>
+      <li>Sum all <b>fixed</b> costs (base + extra support)</li>
+      <li>NP = Rev − Variable − Fixed; NPM = NP ÷ Rev</li>
     </ul>
-    <p><i>A subscription stream (high price, low marginal cost) usually beats a low-fee courier stream on margin — compute both, don't guess.</i></p>
-    <div class="tip">"Additive" means add the new stream on top of the baseline; recompute the whole P&amp;L, then compare margins.</div>
+    <div class="tip">"Additive" = stack the new stream on the baseline, recompute the whole P&amp;L, then compare margins. A high-price/low-cost subscription usually beats a low-fee stream.</div>
   </div>
 
 </div>
@@ -541,193 +452,174 @@
 <div class="cols">
 
   <div class="card des">
-    <h3><span class="lecnum">L1 ·</span> Why Startups Fail &amp; Human-Centered Design</h3>
-    <p><b>Why startups fail:</b> they build for themselves not users; they start with a solution instead of a problem; same-background teams share the same biases and blind spots.</p>
-    <p><b>Bad path:</b> Idea → Build → Hope people want it.<br><b>Good path:</b> <b>People → Problem → Solution.</b></p>
-    <p><span class="term">Human-Centered Design (HCD)</span> = start with people — their frustrations, needs, behaviour, habits, workarounds, environments. <i>"Users describe solutions; designers discover needs."</i></p>
-    <div class="tip">DT is "<b>observation without judgment</b>" — accept you might be wrong about the problem. Your own education/expertise is also a filter that can stop you seeing reality.</div>
+    <h3><span class="lecnum">L1 ·</span> Why Startups Fail &amp; HCD <span class="crit p">P3</span></h3>
+    <p><b>Why startups fail:</b> build for themselves not users; start with a solution not a problem; same-background teams share biases &amp; blind spots.</p>
+    <p><b>Bad:</b> Idea → Build → Hope. <b>Good:</b> <b>People → Problem → Solution.</b></p>
+    <p><span class="term">Human-Centered Design</span> = start with people — frustrations, needs, behaviour, habits, workarounds. <i>"Users describe solutions; designers discover needs."</i></p>
+    <div class="tip">DT = "<b>observation without judgment</b>." Your own expertise is a filter that can stop you seeing reality.</div>
   </div>
 
   <div class="card des">
-    <h3><span class="lecnum">L1 ·</span> Cognitive Biases in Innovation</h3>
+    <h3><span class="lecnum">L1 ·</span> Cognitive Biases <span class="crit p">P3</span></h3>
     <table class="mini">
-      <tr><td>Halo Effect</td><td>One impressive feature fools you into ignoring the flaws</td></tr>
-      <tr><td>Similarity (Like-Me)</td><td>Assuming users think/behave like you do</td></tr>
-      <tr><td>Confirmation</td><td>Seeking only the info that supports your existing idea</td></tr>
-      <tr><td>Stereotyping</td><td>Over-generalising a whole user group</td></tr>
+      <tr><td>Halo Effect</td><td>One impressive feature hides the flaws</td></tr>
+      <tr><td>Similarity (Like-Me)</td><td>Assuming users behave like you</td></tr>
+      <tr><td>Confirmation</td><td>Seeking only info that supports your idea</td></tr>
+      <tr><td>Stereotyping</td><td>Over-generalising a user group</td></tr>
     </table>
-    <p>These biases make you "validate" assumptions instead of genuinely testing them — leading to products built on false premises.</p>
+    <p>These make you "validate" assumptions instead of genuinely testing them.</p>
   </div>
 
   <div class="card des">
-    <h3><span class="lecnum">L1 ·</span> Human Hacks &amp; the Design Journey</h3>
-    <p><span class="term">Human Hack</span> = a non-standard <b>workaround</b> people create because a system failed to meet a need (infrastructure / design / trust / process failure). <b>Where there's a workaround, there's an unmet need.</b> <i>e.g. propping a laptop on folded paper → unmet need for adjustable height.</i></p>
-    <p><b>The bootcamp design journey:</b></p>
+    <h3><span class="lecnum">L1 ·</span> Human Hacks &amp; Design Journey <span class="crit p">P3</span></h3>
+    <p><span class="term">Human Hack</span> = a <b>workaround</b> people create because a system failed a need (infra/design/trust/process). <b>Where there's a workaround, there's an unmet need.</b> <i>e.g. propping a laptop on folded paper.</i></p>
     <p class="formula">Understand → Research → Define → Ideate → Prototype → Test → Evaluate → Pitch</p>
-    <p><i>"Business is about the destination. Design is about the maze (discovery). Don't jump over the maze — walk through it."</i></p>
-    <p><b>Decode complaints one level deeper:</b> "wish slides came earlier" → need for <b>control/predictability</b>; "hate group projects" → need for <b>fair workload</b>; "need a bigger battery" → need for <b>anxiety reduction</b>.</p>
-    <div class="tip">Always translate a stated complaint into the underlying need before designing.</div>
+    <p><i>"Business is the destination; Design is the maze — don't jump over it, walk through."</i></p>
+    <p><b>Decode complaints deeper:</b> "slides earlier" → need for <b>control</b>; "hate group projects" → <b>fair workload</b>; "bigger battery" → <b>anxiety reduction</b>.</p>
   </div>
 
   <div class="card des">
-    <h3><span class="lecnum">L2 ·</span> Observe · Engage · Immerse</h3>
-    <p><b>The problem with self-reporting:</b> people don't do what they <i>say</i>, don't do what they <i>think</i> they do, and don't do what you <i>tell</i> them to do. So watch behaviour, don't trust opinions.</p>
+    <h3><span class="lecnum">L2 ·</span> Observe · Engage · Immerse <span class="crit p">P3</span></h3>
+    <p><b>Self-reporting fails:</b> people don't do what they <i>say</i>, <i>think</i>, or are <i>told</i>.</p>
     <table class="mini">
-      <tr><td>Observe</td><td>Watch what people actually do in context — habits, workarounds, friction, hesitation. Don't intervene or suggest.</td></tr>
-      <tr><td>Engage</td><td>Move from watching to asking — but ask <b>behavioural</b> questions about real past events, not opinions. Decode signals: checking phone = boredom; avoiding speaking = discomfort.</td></tr>
-      <tr><td>Immerse</td><td>Experience the problem yourself → understand how it <b>feels</b>. <i>e.g. write with your non-dominant hand.</i></td></tr>
+      <tr><td>Observe</td><td>Watch in context — habits, workarounds, friction, hesitation. Don't intervene.</td></tr>
+      <tr><td>Engage</td><td>Ask <b>behavioural</b> questions about real past events, not opinions. Decode signals (phone = boredom).</td></tr>
+      <tr><td>Immerse</td><td>Experience it yourself → how it <b>feels</b>. <i>Write with your non-dominant hand.</i></td></tr>
     </table>
-    <div class="tip">Observed behaviour &gt; stated preference. Always. Observation shows <i>what</i> happens, talking shows <i>why</i>, immersion shows <i>how it feels</i>.</div>
+    <div class="tip">Observed behaviour &gt; stated preference. Observation = <i>what</i>, talking = <i>why</i>, immersion = <i>how it feels</i>.</div>
   </div>
 
   <div class="card des">
-    <h3><span class="lecnum">L2 ·</span> Primary vs Secondary Research</h3>
-    <p><span class="term">Primary (direct):</span> you gather it first-hand — observe in context, behavioural interviews, immersion.</p>
-    <p><span class="term">Secondary (indirect / digital shadowing):</span> existing data — reports, statistics, articles. Market research replaces assumptions with evidence.</p>
-    <p>Every research insight should answer: <b>who</b> is the user, <b>what</b> do they need, in <b>what context</b>?</p>
-    <div class="tip"><i>"You think you understand a problem — but you only saw a symptom."</i> Dig past the symptom to the real need.</div>
+    <h3><span class="lecnum">L2 ·</span> Primary vs Secondary Research <span class="crit p">P3</span></h3>
+    <p><span class="term">Primary (direct):</span> first-hand — observe in context, behavioural interviews, immersion.</p>
+    <p><span class="term">Secondary (indirect):</span> existing data — reports, statistics, articles. Replaces assumptions with evidence.</p>
+    <p>Every insight should answer: <b>who</b> is the user, <b>what</b> do they need, in <b>what context</b>?</p>
+    <div class="tip"><i>"You think you understand a problem — but you only saw a symptom."</i></div>
   </div>
 
   <div class="card des">
-    <h3><span class="lecnum">L3 ·</span> PESTEL &amp; System Thinking</h3>
-    <p>Business sees the <b>MAP</b> (where to go); Design sees the <b>TRAP</b> (what's blocking people). Human hacks are responses to system failure.</p>
-    <p><span class="term">PESTEL</span> = PEST + two more external forces:</p>
+    <h3><span class="lecnum">L3 ·</span> PESTEL &amp; System Thinking <span class="crit m">M1</span></h3>
+    <p>Business sees the <b>MAP</b> (where to go); Design sees the <b>TRAP</b> (what blocks people).</p>
     <table class="mini">
-      <tr><td>P/E/S/T</td><td>Political, Economic, Social, Technological (as in PEST)</td></tr>
+      <tr><td>P/E/S/T</td><td>Political, Economic, Social, Technological (as PEST)</td></tr>
       <tr><td>Environmental</td><td>Sustainability, climate, environmental regulation</td></tr>
       <tr><td>Legal</td><td>Employment law, consumer protection, IP law</td></tr>
     </table>
-    <p><span class="term">System Thinking:</span> your user lives inside a network — you also "sell" to their parents, friends, boss, and culture. <b>If the user says YES but someone in their environment says NO, the idea is dead.</b></p>
-    <div class="tip">Every external pressure creates behaviour — you're solving for the human experiencing those pressures.</div>
+    <p><span class="term">System Thinking:</span> your user lives in a network — you also "sell" to their parents, boss, culture. <b>If the user says YES but their environment says NO, the idea is dead.</b></p>
   </div>
 
   <div class="card des">
-    <h3><span class="lecnum">L3 ·</span> Jobs-to-be-Done &amp; Kano Model</h3>
-    <p><span class="term">Jobs-to-be-Done:</span> people "hire" a product to do a job. Three job types:</p>
-    <ul>
-      <li><b>Functional</b> — the practical task (too slow, too costly)</li>
-      <li><b>Social</b> — how they appear to others</li>
-      <li><b>Emotional</b> — how they feel (anxiety, confidence)</li>
-    </ul>
-    <p><i>People don't buy a drill; they hire it to make a hole to hang a family photo — to feel like a good parent.</i></p>
-    <p><span class="term">Kano Model (value layers):</span></p>
+    <h3><span class="lecnum">L3 ·</span> Jobs-to-be-Done &amp; Kano <span class="crit p">P3</span></h3>
+    <p><span class="term">JTBD:</span> people "hire" a product to do a job — <b>Functional</b> (practical task), <b>Social</b> (how they appear), <b>Emotional</b> (how they feel).</p>
+    <p><i>Not a drill — a hole to hang a photo to feel like a good parent.</i></p>
     <table class="mini">
       <tr><td>Required</td><td>Must-have; absence = dealbreaker</td></tr>
-      <tr><td>Expected</td><td>Baseline; users assume it's there (no praise if present, anger if absent)</td></tr>
-      <tr><td>Desired</td><td>Nice-to-have; users prefer it</td></tr>
-      <tr><td>Unexpected</td><td>Delighters; they didn't know they wanted it</td></tr>
+      <tr><td>Expected</td><td>Baseline; assumed (anger if absent)</td></tr>
+      <tr><td>Desired</td><td>Nice-to-have; preferred</td></tr>
+      <tr><td>Unexpected</td><td>Delighters; didn't know they wanted it</td></tr>
     </table>
-    <div class="tip">Kano drift: today's <b>delighter</b> becomes tomorrow's <b>expected</b>, then <b>required</b> (e.g. WiFi on planes).</div>
+    <div class="tip">Kano drift: today's <b>delighter</b> → tomorrow's <b>expected</b> → eventually <b>required</b>.</div>
   </div>
 
   <div class="card key">
-    <h3><span class="lecnum">L3 ·</span> ★ Problem Statement Formula</h3>
-    <p class="formula">[User] struggles with [specific situation] because [root cause], leading to [real consequence].</p>
+    <h3><span class="lecnum">L3 ·</span> ★ Problem Statement Formula <span class="crit p">P3</span></h3>
+    <p class="formula">[User] struggles with [situation] because [root cause], leading to [consequence].</p>
     <div class="ex"><b class="h">Good vs Bad</b>
-      <b>Good:</b> "Busy students on campus skip meals during peak hours because food queues are unpredictable, leading to fatigue and reduced academic performance."<br>
-      <b>Bad:</b> "Students need better food on campus." → too vague, no root cause, no consequence.
+      <b>Good:</b> "Busy students skip meals during peak hours because food queues are unpredictable, leading to fatigue and reduced academic performance."<br>
+      <b>Bad:</b> "Students need better campus food." → vague, no root cause/consequence.
     </div>
-    <div class="tip">A strong problem statement names a <b>specific user + specific situation + root cause + consequence</b>. Vague statements produce irrelevant solutions.</div>
+    <div class="tip">Specific user + situation + root cause + consequence. Vague statements → irrelevant solutions.</div>
   </div>
 
   <div class="card des">
-    <h3><span class="lecnum">L4 ·</span> Personas &amp; the Beachhead</h3>
-    <p><b>The myth of "everyone":</b> if your customer is everyone, you have no customer. "Students / People / Users" are <b>categories, not segments</b>.</p>
+    <h3><span class="lecnum">L4 ·</span> Personas &amp; the Beachhead <span class="crit p">P3</span></h3>
+    <p><b>Myth of "everyone":</b> if your customer is everyone, you have no customer. "Students/People/Users" = <b>categories, not segments</b>.</p>
     <p><b>A real user</b> is in a specific situation, doing something specific, with a real struggle. <i>"If you can't see the moment, you don't understand the problem."</i></p>
-    <p><b>Persona components:</b> When does the problem happen (situation) · What do they actually do (behaviour) · What are they trying to avoid (pains) · What do they want to feel (emotional job).</p>
-    <p><span class="term">Beachhead persona</span> = your one most-focused target = Segment + real human + real moment + job + intensity. Win them first, then expand.</p>
-    <div class="tip"><b>Shark bite</b> (urgent, emotional, act NOW) vs <b>Mosquito bite</b> (annoying, ignored, delayed). A beachhead needs a <b>shark-bite</b> problem — if it's a mosquito bite, people won't change behaviour to fix it.</div>
+    <p><b>Persona:</b> When (situation) · What they do (behaviour) · What they avoid (pains) · What they want to feel (emotional job).</p>
+    <p><span class="term">Beachhead persona</span> = Segment + real human + real moment + job + intensity.</p>
+    <div class="tip"><b>Shark bite</b> (urgent, act NOW) vs <b>Mosquito bite</b> (annoying, ignored). Beachhead needs a shark-bite problem.</div>
   </div>
 
   <div class="card des">
-    <h3><span class="lecnum">L4 ·</span> Root Cause &amp; the Jargon Assassin</h3>
-    <p><span class="term">5 Whys:</span> ask "why?" repeatedly to drill from symptom to <b>root cause</b>. Then move from "<b>What is</b>" (the problem/cage) to "<b>What if</b>" (the solution/exit).</p>
-    <p><span class="term">Jargon Assassin:</span> jargon is a <b>symptom</b>; unclear thinking is the real problem. Rule: explain your idea to someone with zero background. If you can't explain it to a 10-year-old or your grandmother in Amman, the idea is too weak. <b>"Speak Human, Not Corporate."</b></p>
+    <h3><span class="lecnum">L4 ·</span> Root Cause &amp; Jargon Assassin <span class="crit p">P3</span><span class="crit p">P9</span></h3>
+    <p><span class="term">5 Whys:</span> ask "why?" repeatedly to drill from symptom to <b>root cause</b>; then move from "<b>What is</b>" (problem) to "<b>What if</b>" (solution).</p>
+    <p><span class="term">Jargon Assassin:</span> jargon is a <b>symptom</b>; unclear thinking is the real problem. If you can't explain it to a 10-year-old or your grandmother in Amman, the idea is too weak. <b>"Speak Human, Not Corporate."</b></p>
   </div>
 
   <div class="card key">
-    <h3><span class="lecnum">L5 ·</span> ★ How Might We (HMW) — 4 Types</h3>
-    <p><span class="term">HMW</span> isn't a fixed sentence — it's a <b>decision about which part of the problem space to explore</b>. It focuses thinking while keeping multiple solution directions open. Template: <i>"How might we help [user] achieve [job] despite [pain]?"</i></p>
+    <h3><span class="lecnum">L5 ·</span> ★ How Might We (HMW) — 4 Types <span class="crit p">P4</span></h3>
+    <p><span class="term">HMW</span> = a <b>decision about which part of the problem space to explore</b>; focuses thinking while keeping directions open. <i>"How might we help [user] achieve [job] despite [pain]?"</i></p>
     <table class="mini">
-      <tr><td>1 — Efficiency</td><td>"HMW reduce waiting time?" → faster systems, optimisation</td></tr>
-      <tr><td>2 — Experience</td><td>"HMW reduce stress while waiting?" → emotional/perception solutions</td></tr>
-      <tr><td>3 — Behaviour</td><td>"HMW change when students eat?" → shift habits/patterns</td></tr>
-      <tr><td>4 — System</td><td>"HMW redesign how food is distributed?" → structural, biggest innovation</td></tr>
+      <tr><td>1 — Efficiency</td><td>"reduce waiting time?" → faster/optimise</td></tr>
+      <tr><td>2 — Experience</td><td>"reduce stress while waiting?" → emotional</td></tr>
+      <tr><td>3 — Behaviour</td><td>"change when students eat?" → shift habits</td></tr>
+      <tr><td>4 — System</td><td>"redesign food distribution?" → structural</td></tr>
     </table>
-    <div class="tip">The HMW <b>type you choose determines the kind of solutions</b> you'll get. Too wide = chaos; too narrow = boring.</div>
+    <div class="tip">The HMW <b>type you choose determines the kind of solutions</b> you'll get.</div>
   </div>
 
   <div class="card des">
-    <h3><span class="lecnum">L5 ·</span> Divergence, Ideation &amp; Communication</h3>
-    <p><span class="term">Divergence</span> = expanding thinking. The first idea is the obvious one — push for <b>many fundamentally different</b> ideas. Rules: quantity over quality, no judging, different directions.</p>
-    <p><b>Wrong</b> (same thinking, all variations of one idea): app with notifications, app with tracking, app with AI.<br><b>Right</b> (different thinking): eliminate queues entirely, shift eating times, remove the need for a cafeteria.</p>
-    <p>Without an HMW: ideas are different but irrelevant. With an HMW: different <b>and</b> relevant. Change the approach, don't decorate the same idea.</p>
-    <p><b>Communicating ideas:</b> filler words (umm, like, maybe) = panic signals. <b>The Pause</b> = the person who owns silence seems confident. Slow down at the insight (the "because" in your problem statement).</p>
+    <h3><span class="lecnum">L5 ·</span> Divergence, Ideation &amp; Communication <span class="crit p">P4</span><span class="crit p">P9</span></h3>
+    <p><span class="term">Divergence</span> = expand thinking. The first idea is obvious — push for <b>many fundamentally different</b> ideas. Rules: quantity over quality, no judging, different directions.</p>
+    <p><b>Wrong</b> (same thinking): app with notifications, app with tracking, app with AI. <b>Right</b> (different thinking): eliminate queues, shift eating times, remove the cafeteria need.</p>
+    <p>Without HMW: different but irrelevant. With HMW: different <b>and</b> relevant.</p>
+    <p><b>Communicating:</b> fillers (umm, like) = panic; <b>the Pause</b> = confidence. Slow down at the insight (the "because").</p>
   </div>
 
   <div class="card des">
-    <h3><span class="lecnum">L6 ·</span> Validation Engine &amp; Double Diamond</h3>
-    <p><span class="term">Validation Engine:</span> everything before prototyping was in your head — now reality decides.</p>
+    <h3><span class="lecnum">L6 ·</span> Validation Engine &amp; Double Diamond <span class="crit p">P4</span><span class="crit m">M2</span><span class="crit d">D2</span></h3>
     <p class="formula">Insight → Hypothesis → Prototype → Test → Learn → Decide</p>
-    <p><span class="term">Double Diamond</span> — two cycles of expand-then-focus:</p>
     <table class="mini">
       <tr><td>Discover</td><td>Expand — behaviour, tension, contradiction</td></tr>
       <tr><td>Define</td><td>Focus — construct the right problem (<b>hardest step</b>)</td></tr>
-      <tr><td>Develop</td><td>Expand — the HMW zone, controlled exploration</td></tr>
+      <tr><td>Develop</td><td>Expand — the HMW zone</td></tr>
       <tr><td>Deliver</td><td>Focus — test, refine, decide</td></tr>
     </table>
-    <div class="tip">Fatal mistake: testing <b>HOW</b> (usability) before testing <b>WHY</b> (value). First confirm people want it, then refine how it works. Reality check: "if I removed the technology, would the idea still work?"</div>
+    <div class="tip">Fatal mistake: testing <b>HOW</b> (usability) before <b>WHY</b> (value). Confirm they want it, then refine how. "If I removed the tech, would it still work?"</div>
   </div>
 
   <div class="card des">
-    <h3><span class="lecnum">L6 ·</span> Prototype Types &amp; Demand Signals</h3>
+    <h3><span class="lecnum">L6 ·</span> Prototype Types &amp; Demand Signals <span class="crit p">P4</span><span class="crit m">M2</span></h3>
     <table class="mini">
-      <tr><th>Type</th><th>Tests / watch for · limitation</th></tr>
-      <tr><td>Storyboard</td><td>Journey, sequence, logic (6–8 steps + emotion). "Does the story make sense?" — can't test demand/interaction</td></tr>
-      <tr><td>Role-Play</td><td>Service, conversation, support — depends on acting; not for demand</td></tr>
-      <tr><td>Interface (paper/digital)</td><td>Screens, user flow — watch wrong taps &amp; hesitation; not real speed</td></tr>
-      <tr><td>Digital MVP</td><td>Real interaction: 1 screen / 1 flow / 1 function — watch completion &amp; drop-off; risk of overbuilding</td></tr>
-      <tr><td>Landing / Fake Door</td><td>Demand — describe idea + "sign up", watch clicks/signups; tests intent, not behaviour</td></tr>
+      <tr><th>Type</th><th>Tests · limitation</th></tr>
+      <tr><td>Storyboard</td><td>Journey/logic (6–8 steps + emotion) · can't test demand</td></tr>
+      <tr><td>Role-Play</td><td>Service/conversation · depends on acting</td></tr>
+      <tr><td>Interface (paper/digital)</td><td>Screens/flow — wrong taps, hesitation · not real speed</td></tr>
+      <tr><td>Digital MVP</td><td>Real interaction: 1 screen/flow/function · risk of overbuilding</td></tr>
+      <tr><td>Landing / Fake Door</td><td>Demand — "sign up", watch clicks · tests intent not behaviour</td></tr>
     </table>
-    <p><b>Outdoor test signals:</b> "I would use this" → <b>ignore</b> (cheap talk); "Interesting, but…" → <b>dig</b> (find the real objection); "When can I get it?" → <b>act</b> (real demand). Patterns &gt; opinions.</p>
+    <p><b>Signals:</b> "I would use this" → <b>ignore</b> (cheap talk); "Interesting, but…" → <b>dig</b>; "When can I get it?" → <b>act</b> (real demand). Patterns &gt; opinions.</p>
   </div>
 
   <div class="card des">
-    <h3><span class="lecnum">L7 ·</span> Feedback Extraction &amp; Evidence Chain</h3>
-    <p>Feedback isn't feedback — it's <b>extraction</b> of behaviour, friction, expectation gaps, and commitment. You didn't test ideas, you tested <b>assumptions</b>. Testing without changing anything = performance (you learned nothing).</p>
-    <p><span class="term">Evidence Chain</span> — skip any step and you're guessing:</p>
+    <h3><span class="lecnum">L7 ·</span> Feedback Extraction &amp; Evidence Chain <span class="crit m">M2</span><span class="crit d">D2</span></h3>
+    <p>Feedback = <b>extraction</b> of behaviour, friction, expectation gaps, commitment. You tested <b>assumptions</b>, not ideas. Testing without changing anything = performance.</p>
     <p class="formula">Observation → Insight → Decision → Alignment</p>
-    <ul>
-      <li><b>Observation</b> — what the user did</li>
-      <li><b>Insight</b> — what that behaviour means</li>
-      <li><b>Decision</b> — what you changed</li>
-      <li><b>Alignment</b> — why this better fits the user</li>
-    </ul>
+    <p><b>Observation</b> (what they did) · <b>Insight</b> (what it means) · <b>Decision</b> (what you changed) · <b>Alignment</b> (why it fits better). Skip one = guessing.</p>
     <p><b>"If you can't say this, you didn't learn":</b> "We observed ___ · This means ___ · So we changed ___ · This aligns with the user because ___."</p>
   </div>
 
   <div class="card des">
-    <h3><span class="lecnum">L7 ·</span> Feedback Methods &amp; RAT</h3>
+    <h3><span class="lecnum">L7 ·</span> Feedback Methods &amp; RAT <span class="crit m">M2</span><span class="crit d">D2</span></h3>
     <table class="mini">
-      <tr><td>Silent Observation</td><td>Remove yourself — no explanation, correction or guidance. Watch hesitation, wrong actions, pauses, breakdown points.</td></tr>
-      <tr><td>Thinking Aloud</td><td>User narrates while doing → captures where their <b>mental model breaks</b>.</td></tr>
-      <tr><td>Wizard of Oz</td><td>Simulate the experience manually (you do the work behind the scenes) — does the <b>value</b> hold without the tech?</td></tr>
-      <tr><td>Commitment Test</td><td>Push for action/effort/continuation. If they refuse, earlier positive feedback is invalid.</td></tr>
+      <tr><td>Silent Observation</td><td>No help/guidance — watch hesitation, wrong actions, breakdown.</td></tr>
+      <tr><td>Thinking Aloud</td><td>User narrates → where their mental model breaks.</td></tr>
+      <tr><td>Wizard of Oz</td><td>Simulate the experience manually → does the value hold without tech?</td></tr>
+      <tr><td>Commitment Test</td><td>Push for action/effort; refusal invalidates earlier praise.</td></tr>
     </table>
-    <p><span class="term">RAT — Riskiest Assumption Test:</span> identify the one assumption where "if THIS is wrong, everything collapses," and test it first. Define the success rate <b>and</b> failure threshold <i>before</i> testing. Test only with your defined persona — everyone else is noise. Never ask "Do you like it?" or "Would you use it?"</p>
+    <p><span class="term">RAT — Riskiest Assumption Test:</span> the one assumption where "if THIS is wrong, everything collapses" — test it first. Set success rate &amp; failure threshold <i>before</i> testing; test only your persona; never ask "Do you like it?"</p>
   </div>
 
   <div class="card key">
-    <h3><span class="lecnum">L7 ·</span> ★ Iterate / Pivot / Kill</h3>
-    <p>Diagnose the <b>type</b> of problem first, then choose the action:</p>
+    <h3><span class="lecnum">L7 ·</span> ★ Iterate / Pivot / Kill <span class="crit d">D2</span></h3>
     <table class="mini">
       <tr><th>Signal</th><th>Diagnosis → Action</th></tr>
-      <tr><td>Usability Friction (HOW)</td><td>User wants value but the system blocks them → <b>Iterate</b> (fix flow/clarity)</td></tr>
-      <tr><td>Value Deficit (WHY)</td><td>User understands but doesn't care → <b>Pivot</b> (the problem is weak)</td></tr>
-      <tr><td>Mental Model Mismatch</td><td>User uses it differently than expected → <b>Investigate</b> (maybe a new opportunity)</td></tr>
+      <tr><td>Usability Friction (HOW)</td><td>Wants value but blocked → <b>Iterate</b> (fix flow)</td></tr>
+      <tr><td>Value Deficit (WHY)</td><td>Understands but doesn't care → <b>Pivot</b> (weak problem)</td></tr>
+      <tr><td>Mental Model Mismatch</td><td>Uses it differently → <b>Investigate</b> (new opportunity)</td></tr>
     </table>
-    <p><b>Decision Layer:</b> <b>Iterate</b> = problem real, solution weak · <b>Pivot</b> = problem wrong · <b>Kill</b> = no behavioural intent after multiple tests.</p>
-    <p><b>Cost of being wrong (launch stages):</b> MVP (small, fast, iterate easily) → Pilot (controlled, slower) → Open Beta (everyone sees everything) → Polished Launch (full exposure, can't fix fast = danger). <i>"If you launch when you can't iterate, you're gambling, not testing."</i></p>
+    <p><b>Decision Layer:</b> Iterate = problem real, solution weak · Pivot = problem wrong · Kill = no behavioural intent after multiple tests.</p>
+    <p><b>Cost of being wrong:</b> MVP (small, iterate easily) → Pilot (controlled) → Open Beta (everyone sees) → Polished Launch (can't fix fast = danger). <i>"Launch when you can't iterate = gambling."</i></p>
   </div>
 
 </div>
@@ -739,12 +631,12 @@
   <div class="card frame">
     <h3>🎯 How to answer each question type</h3>
     <ul>
-      <li><b>"Classify this into SWOT / 4Ps / BMC":</b> ask internal-vs-external &amp; good-vs-bad (SWOT), or which lever is being changed (4Ps). Match the keyword to the definition.</li>
-      <li><b>"Which pricing strategy?":</b> low price to win share = Penetration; high then drop = Skimming; based on cost = Cost-Plus; based on perceived value = Value-Based.</li>
-      <li><b>Calculation:</b> write the formula first, plug numbers, show working. Breakeven, margins, ROI, TAM/SAM/SOM all have fixed formulas — use them.</li>
-      <li><b>"Best single BMC change":</b> pick the option that fixes desirability + feasibility + viability together (usually a key partner / operations fix that also unlocks recurring revenue).</li>
-      <li><b>Design "what should they conclude":</b> translate the behaviour/complaint into the underlying <b>need</b>; never take the stated wish literally.</li>
-      <li><b>Iterate/Pivot/Kill:</b> identify HOW-problem (Iterate), WHY-problem (Pivot), or repeated no-intent (Kill).</li>
+      <li><b>Classify (SWOT/4Ps/BMC):</b> internal-vs-external &amp; good-vs-bad (SWOT); which lever changed (4Ps); match keyword to definition.</li>
+      <li><b>Which pricing strategy:</b> low to win share = Penetration; high then drop = Skimming; cost-based = Cost-Plus; value-based = Value-Based.</li>
+      <li><b>Calculation:</b> write the formula first, plug numbers, show working. Breakeven, margins, ROI, TAM/SAM/SOM all have fixed formulas.</li>
+      <li><b>Best single BMC change:</b> the option that fixes desirability + feasibility + viability together.</li>
+      <li><b>Design "what should they conclude":</b> translate the behaviour/complaint into the underlying <b>need</b>; never take the wish literally.</li>
+      <li><b>Iterate/Pivot/Kill:</b> HOW-problem = Iterate; WHY-problem = Pivot; repeated no-intent = Kill.</li>
     </ul>
   </div>
 
@@ -753,13 +645,13 @@
     <table class="mini">
       <tr><td>PEST vs PESTEL</td><td>PESTEL = PEST + Environmental + Legal</td></tr>
       <tr><td>Fixed vs Variable</td><td>Fixed = same regardless of volume; Variable = scales with units</td></tr>
-      <tr><td>CapEx vs OpEx</td><td>CapEx = long-term asset (oven, used for years); OpEx = day-to-day running cost</td></tr>
-      <tr><td>Penetration vs Skimming</td><td>Low price to grab share vs high price first then lower</td></tr>
-      <tr><td>Pain vs Gain</td><td>Pain = something to avoid; Gain = a desired positive outcome</td></tr>
-      <tr><td>Strength vs Opportunity</td><td>Strength = internal +; Opportunity = external +</td></tr>
-      <tr><td>Weakness vs Threat</td><td>Weakness = internal −; Threat = external −</td></tr>
-      <tr><td>Profit vs Cash Flow</td><td>Can be profitable yet cash-broke (timing of payments)</td></tr>
-      <tr><td>TAM vs SAM vs SOM</td><td>Whole market vs serviceable slice vs obtainable short-term slice</td></tr>
+      <tr><td>CapEx vs OpEx</td><td>CapEx = long-term asset (oven); OpEx = day-to-day cost</td></tr>
+      <tr><td>Penetration vs Skimming</td><td>Low to grab share vs high first then lower</td></tr>
+      <tr><td>Pain vs Gain</td><td>Pain = avoid; Gain = desired positive outcome</td></tr>
+      <tr><td>Strength vs Opportunity</td><td>Internal + vs external +</td></tr>
+      <tr><td>Weakness vs Threat</td><td>Internal − vs external −</td></tr>
+      <tr><td>Profit vs Cash Flow</td><td>Can be profitable yet cash-broke (timing)</td></tr>
+      <tr><td>TAM/SAM/SOM</td><td>Whole vs serviceable vs obtainable slice</td></tr>
       <tr><td>Iterate vs Pivot</td><td>Weak solution (fix HOW) vs wrong problem (change WHY)</td></tr>
     </table>
   </div>
@@ -767,12 +659,12 @@
   <div class="card key">
     <h3>⚠️ Calculation traps that lose marks</h3>
     <ul>
-      <li><b>Breakeven:</b> compare <b>total contribution</b> (CM×units) to fixed costs — not revenue to fixed costs.</li>
-      <li><b>Reclassification:</b> moving a cost between COGS and OpEx <b>never changes Net Profit</b> — only GPM moves.</li>
-      <li><b>Margins:</b> always divide by <b>revenue</b>; "same profit on lower revenue" = higher margin.</li>
-      <li><b>ROI vs NPM:</b> different denominators (invested capital vs revenue) — test each threshold separately.</li>
+      <li><b>Breakeven:</b> compare <b>total contribution</b> (CM×units) to fixed costs — not revenue.</li>
+      <li><b>Reclassification:</b> moving a cost COGS↔OpEx <b>never changes Net Profit</b> — only GPM moves.</li>
+      <li><b>Margins:</b> always divide by <b>revenue</b>; same profit on lower revenue = higher margin.</li>
+      <li><b>ROI vs NPM:</b> different denominators — test each threshold separately.</li>
       <li><b>Price ↑ in TAM/SAM/SOM:</b> "willing &amp; able" % falls → SAM &amp; SOM shrink.</li>
-      <li><b>"At least 12%":</b> exactly 12% <b>meets</b> the threshold (no shortfall, no headroom).</li>
+      <li><b>"At least 12%":</b> exactly 12% <b>meets</b> it (no shortfall, no headroom).</li>
       <li>Convert monthly→annual revenue by ×12 when asked for annual SAM revenue.</li>
     </ul>
   </div>
@@ -788,7 +680,7 @@
       <li>"I would use this" = cheap talk; "When can I get it?" = real demand.</li>
       <li>Beachhead needs a <b>shark-bite</b> (urgent) problem.</li>
       <li><b>Define</b> is the hardest step — construct the right problem.</li>
-      <li>If the user says YES but their system says NO → the idea dies.</li>
+      <li>If user says YES but their system says NO → the idea dies.</li>
       <li>Lean = validate fast; Agile = adapt in cycles; they complement.</li>
       <li>Profitable ≠ cash-positive (timing of cash flows).</li>
     </ul>
