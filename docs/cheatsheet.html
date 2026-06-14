@@ -52,6 +52,17 @@
   table.mini td, table.mini th { border: 0.6px solid #ddd; padding: 2px 4px; vertical-align: top; text-align:left; }
   table.mini td:first-child { font-weight: 700; white-space: nowrap; background: #f7f7fc; }
   table.mini th { background:#eef0fb; font-size:9px; }
+  table.map { table-layout:fixed; }
+  table.map td { font-size:9px; vertical-align:top; }
+  table.map td:first-child { white-space:normal; width:58%; font-weight:600; background:#fff; }
+  table.map th:first-child { width:58%; }
+  table.stmt { width:100%; border-collapse:collapse; margin:3px 0; font-size:9.3px; }
+  table.stmt td { padding:1.5px 5px; border-bottom:0.5px solid #eee; }
+  table.stmt td:last-child { text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
+  table.stmt tr.sub td { font-weight:700; border-top:0.8px solid #999; border-bottom:0.8px solid #999; background:#f4f4fc; }
+  table.stmt tr.tot td { font-weight:800; border-top:1.4px double #555; border-bottom:1.4px double #555; }
+  table.stmt tr.neg td:last-child { color:#b91c1c; }
+  table.stmt td.grp { font-weight:700; color:#4338ca; padding-top:4px; }
   .sec-head { column-span: all; background: linear-gradient(90deg,#6366f1,#a855f7); color: #fff; font-weight: 700; font-size: 13px; padding: 4px 10px; border-radius: 5px; margin: 4px 0 8px; }
   .sec-head.bizh { background: linear-gradient(90deg,#0d9488,#14b8a6); }
   .sec-head.desh { background: linear-gradient(90deg,#e11d48,#fb7185); }
@@ -64,14 +75,59 @@
 
 <div class="hero">
   <h1 class="title">🧠 Entrepreneurship Bootcamp — Complete Study Guide</h1>
-  <p class="subtitle">Al-Hussein Technical University (HTU) · Everything you need for Pass / Merit / Distinction · Business (9 lectures) + Design Thinking (7 lectures)</p>
-  <div class="legend">
-    <span class="pill b">BUSINESS</span> Zaid Maaytah &nbsp;·&nbsp; <span class="pill d">DESIGN</span> Fayzeh Abuhaltam &nbsp;·&nbsp;
-    <b style="color:#14b8a6">teal=business</b> · <b style="color:#f43f5e">rose=design</b> · <b style="color:#f59e0b">amber=formula/exam-critical</b> · <b style="color:#6366f1">indigo=worked example/framework</b>
+  <p class="subtitle">Cheatsheet by Makram ElJamal for Entrepreneurship Bootcamp · Spring 2026</p>
+</div>
+
+<!-- ============ GRADING CRITERIA MAP ============ -->
+<div class="sec-head">📋 PEARSON CRITERIA → WHERE TO STUDY IT <small>P = Pass · M = Merit · D = Distinction</small></div>
+<div class="cols">
+
+  <div class="card frame">
+    <h3>1 · Entrepreneurial Mindset &amp; Approaches</h3>
+    <table class="mini map">
+      <tr><th>Criterion</th><th>Study in this guide</th></tr>
+      <tr><td>P1 — key skills + entrepreneurial mindset to launch a start-up</td><td>L1: Innovation &amp; Entrepreneurship; 3Ms; Growth Mindset; Agility; High-Performance Teams</td></tr>
+      <tr><td>P2 — entrepreneurship approaches (agile, lean, social)</td><td>L3: Entrepreneurship Approaches</td></tr>
+      <tr><td>M1 — PEST analysis; identify external O&amp;T; justify pursuing an opportunity</td><td>L2: PEST + SWOT (the O &amp; T)</td></tr>
+      <tr><td>D1 — justify the most suitable approach (integrate O&amp;T, market, resources, team, goals)</td><td>L3 approaches + L2 PEST/SWOT (e.g. Lean for an uncertain market + limited resources)</td></tr>
+    </table>
   </div>
-  <div class="howto">
-    <b>How the exam is graded (Pearson):</b> <b>Pass</b> = concept recognition (definitions, classify into a framework). <b>Merit</b> = apply + calculate (breakeven, TAM/SAM/SOM, financial adjustments). <b>Distinction</b> = analyse & compare (margins under reclassification, ROI vs NPM thresholds, choose the best option). The <b style="color:#b45309">amber finance cards + worked examples</b> are where Merit & Distinction marks live — study those hardest.
+
+  <div class="card frame">
+    <h3>2 · Design Thinking &amp; Prototyping</h3>
+    <table class="mini map">
+      <tr><th>Criterion</th><th>Study in this guide</th></tr>
+      <tr><td>P3 — DT techniques to identify market gaps &amp; challenges</td><td>L1 DT process / HCD / Human Hacks; L2 Observe·Engage·Immerse; L3 Problem Statement</td></tr>
+      <tr><td>P4 — DT to propose a solution + build a prototype</td><td>L5 HMW &amp; Ideation; L6 Prototype Types</td></tr>
+      <tr><td>M2 — multiple prototype iterations from validated feedback; problem–solution fit</td><td>L6 Validation Engine; L7 Feedback Extraction &amp; Methods</td></tr>
+      <tr><td>D2 — critically evaluate validation/testing (problem validation, problem–solution &amp; product–market fit)</td><td>L6 Double Diamond; L7 RAT + Iterate/Pivot/Kill</td></tr>
+    </table>
   </div>
+
+  <div class="card frame">
+    <h3>3 · Marketing, Market Size &amp; Finance</h3>
+    <table class="mini map">
+      <tr><th>Criterion</th><th>Study in this guide</th></tr>
+      <tr><td>P5 — analyse target market + estimate market size</td><td>L5 Markets / Segmentation; TAM/SAM/SOM; Diffusion of Innovation</td></tr>
+      <tr><td>P6 — competitor analysis + clear value proposition</td><td>L6 Competitor Analysis / USP / Perceptual Map; L5 Value Proposition Canvas</td></tr>
+      <tr><td>P7 — cost structures, revenue streams/model, financial projections</td><td>L8 Cost, Revenue &amp; Finance Basics</td></tr>
+      <tr><td>M3 — marketing mix → strategy communicating the VP &amp; competitive advantage</td><td>L7 4Ps → 7Ps</td></tr>
+      <tr><td>M4 — forecasted budget + key financial statements</td><td>L8 Budget; Finance Deep-Dive: Income Statement, Balance Sheet &amp; Cash Flow layouts</td></tr>
+      <tr><td>D3 — feasibility &amp; viability via financial ratios &amp; analysis; justify improvements</td><td>Finance Deep-Dive: NPM/GPM/ROI/Current Ratio, Breakeven + all worked examples</td></tr>
+    </table>
+  </div>
+
+  <div class="card frame">
+    <h3>4 · Business Model Canvas &amp; Pitch</h3>
+    <table class="mini map">
+      <tr><th>Criterion</th><th>Study in this guide</th></tr>
+      <tr><td>P8 — craft &amp; describe a Business Model Canvas</td><td>L4 Business Model Canvas (9 blocks)</td></tr>
+      <tr><td>P9 — presentation &amp; persuasion to pitch a business idea</td><td>L4 Jargon Assassin ("Speak Human"); L5 Communication &amp; The Pause</td></tr>
+      <tr><td>M5 — compelling pitch applying entrepreneurial knowledge to investors</td><td>Whole guide — lead with VP, market size, BMC &amp; financial viability</td></tr>
+      <tr><td>D4 — critically evaluate the BMC; improve desirability / feasibility / viability</td><td>L4 BMC + Common Mistakes; "best single BMC change" in Exam Strategy</td></tr>
+    </table>
+  </div>
+
 </div>
 
 <!-- ============ BUSINESS TRACK ============ -->
@@ -298,6 +354,80 @@
     </table>
     <p><b>Key terms:</b> Revenue = total income from sales. <b>COGS</b> = cost of goods sold (direct cost of producing what you sold). <b>OpEx</b> = operating expenses (running the business: marketing, admin, rent).</p>
     <div class="tip">Profitable ≠ cash-positive. You can record a sale (profit) before the customer pays, so cash can be negative while profit is positive. <b>Burn rate</b> = how fast a startup spends its cash reserves.</div>
+  </div>
+
+  <div class="card frame">
+    <h3>📄 Income Statement (P&amp;L) — layout</h3>
+    <p class="def">A "waterfall": start at sales, subtract costs in layers down to the bottom line. Covers a <b>period</b> (e.g. a year).</p>
+    <table class="stmt">
+      <tr><td>Revenue (Sales)</td><td>1,000,000</td></tr>
+      <tr class="neg"><td>− Cost of Goods Sold (COGS)</td><td>(600,000)</td></tr>
+      <tr class="sub"><td>= Gross Profit</td><td>400,000</td></tr>
+      <tr class="neg"><td>− Operating Expenses (OpEx)</td><td>(250,000)</td></tr>
+      <tr class="sub"><td>= Operating Profit (EBIT)</td><td>150,000</td></tr>
+      <tr class="neg"><td>− Interest</td><td>(20,000)</td></tr>
+      <tr class="neg"><td>− Tax</td><td>(30,000)</td></tr>
+      <tr class="tot"><td>= Net Profit</td><td>100,000</td></tr>
+    </table>
+    <p><b>Tips to calculate:</b></p>
+    <ul>
+      <li>Work <b>strictly top-down</b>; each subtotal feeds the next line.</li>
+      <li>Only <b>direct production</b> costs go in COGS; running costs (rent, marketing, admin, depreciation) go in OpEx.</li>
+      <li>GPM = Gross Profit ÷ Revenue; NPM = Net Profit ÷ Revenue.</li>
+    </ul>
+    <div class="tip">Here GPM = 400,000/1,000,000 = 40%; NPM = 100,000/1,000,000 = 10%.</div>
+  </div>
+
+  <div class="card frame">
+    <h3>📄 Balance Sheet — layout</h3>
+    <p class="def">A <b>snapshot</b> at one date. Must always balance: <b>Assets = Liabilities + Equity</b>.</p>
+    <table class="stmt">
+      <tr><td class="grp">ASSETS</td><td></td></tr>
+      <tr><td>Cash</td><td>50,000</td></tr>
+      <tr><td>Accounts receivable</td><td>70,000</td></tr>
+      <tr><td>Inventory</td><td>80,000</td></tr>
+      <tr class="sub"><td>Current assets</td><td>200,000</td></tr>
+      <tr><td>Equipment (non-current)</td><td>300,000</td></tr>
+      <tr class="tot"><td>Total Assets</td><td>500,000</td></tr>
+      <tr><td class="grp">LIABILITIES</td><td></td></tr>
+      <tr><td>Accounts payable</td><td>90,000</td></tr>
+      <tr><td>Short-term loan</td><td>60,000</td></tr>
+      <tr class="sub"><td>Current liabilities</td><td>150,000</td></tr>
+      <tr><td>Long-term loan</td><td>150,000</td></tr>
+      <tr class="sub"><td>Total Liabilities</td><td>300,000</td></tr>
+      <tr><td class="grp">EQUITY</td><td>200,000</td></tr>
+      <tr class="tot"><td>Liabilities + Equity</td><td>500,000</td></tr>
+    </table>
+    <p><b>Tips to calculate:</b></p>
+    <ul>
+      <li>If two of Assets / Liabilities / Equity are given, find the third by rearranging <b>Equity = Assets − Liabilities</b>.</li>
+      <li><b>Current</b> = due/usable within 1 year (cash, receivables, inventory, payables). <b>Non-current</b> = long-term (equipment, long-term loans).</li>
+      <li>Current Ratio = Current Assets ÷ Current Liabilities = 200,000/150,000 = <b>1.33</b>.</li>
+    </ul>
+    <div class="tip">If it doesn't balance, you've missed an item or mis-signed one — recheck before answering.</div>
+  </div>
+
+  <div class="card frame">
+    <h3>📄 Cash Flow Statement — layout</h3>
+    <p class="def">Tracks actual <b>cash in/out</b> over a period, in three buckets, ending at the change in the bank balance.</p>
+    <table class="stmt">
+      <tr><td class="grp">OPERATING (day-to-day trading)</td><td></td></tr>
+      <tr><td>Cash from customers − cash paid out</td><td>120,000</td></tr>
+      <tr><td class="grp">INVESTING (buying/selling assets)</td><td></td></tr>
+      <tr class="neg"><td>Bought equipment</td><td>(300,000)</td></tr>
+      <tr><td class="grp">FINANCING (loans/investment/owners)</td><td></td></tr>
+      <tr><td>Loan + investor funds received</td><td>250,000</td></tr>
+      <tr class="sub"><td>Net change in cash</td><td>70,000</td></tr>
+      <tr><td>+ Opening cash</td><td>30,000</td></tr>
+      <tr class="tot"><td>= Closing cash</td><td>100,000</td></tr>
+    </table>
+    <p><b>Tips to calculate:</b></p>
+    <ul>
+      <li>Sort every item into <b>Operating</b> (sales, salaries, rent), <b>Investing</b> (equipment, property), or <b>Financing</b> (loans, equity, repayments).</li>
+      <li>Net change = sum of all three buckets; <b>Closing = Opening + Net change</b>.</li>
+      <li>Cash outflows are negative — money received is +, money spent is −.</li>
+    </ul>
+    <div class="tip">A profitable firm can still show negative cash (e.g. big equipment purchase or unpaid invoices) — this statement reveals that, the P&amp;L doesn't.</div>
   </div>
 
   <div class="card key">
